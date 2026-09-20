@@ -1,0 +1,82 @@
+[
+  {
+    "year": "2023",
+    "stateabbr": "FL",
+    "locationname": "Flagler",
+    "locationid": "12035",
+    "measureid": "DEPRESSION",
+    "data_value": "18.3"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "FL",
+    "locationname": "Seminole",
+    "locationid": "12117",
+    "measureid": "DEPRESSION",
+    "data_value": "16.4"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "GA",
+    "locationname": "Wheeler",
+    "locationid": "13309",
+    "measureid": "DEPRESSION",
+    "data_value": "19.0"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "IL",
+    "locationname": "Douglas",
+    "locationid": "17041",
+    "measureid": "DEPRESSION",
+    "data_value": "22.6"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "IA",
+    "locationname": "Fremont",
+    "locationid": "19071",
+    "measureid": "DEPRESSION",
+    "data_value": "20.1"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "NE",
+    "locationname": "Webster",
+    "locationid": "31181",
+    "measureid": "DEPRESSION",
+    "data_value": "17.6"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "NV",
+    "locationname": "Nye",
+    "locationid": "32023",
+    "measureid": "DEPRESSION",
+    "data_value": "21.0"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "NM",
+    "locationname": "Los Alamos",
+    "locationid": "35028",
+    "measureid": "DEPRESSION",
+    "data_value": "20.5"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "NM",
+    "locationname": "Quay",
+    "locationid": "35037",
+    "measureid": "DEPRESSION",
+    "data_value": "22.3"
+  },
+  {
+    "year": "2023",
+    "stateabbr": "NC",
+    "locationname": "Pamlico",
+    "locationid": "37137",
+    "measureid": "DEPRESSION",
+    "data_value": "23.0"
+  }
+]

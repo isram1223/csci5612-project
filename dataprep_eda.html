@@ -59,7 +59,7 @@
     </ul>
 
     <h2 id="sources">Where the data came from</h2>
-    <p class="draft">In your own words, explain how, where, and why each source was gathered, and how the sources fit the topic.</p>
+    <p class=>Four distinct public data sources were aggregated to analyze the relationships between community conditions, mental health, and infant health outcomes across United States counties. The CDC PLACES dataset and US Census American Community Survey give a standardized health prevalence and socioeconmic metrics gather vis APIs. The County Health Rankings and USDA Rural-Urban Continuum Codes further offer maternal-child health indicators and geographica classifications. Combining these sources together provides a mulit-dimensional foundation for evaluating how environmental, structural, and mental health factors impact infant health.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Source</th><th>Access</th><th>What it provides</th><th>Raw file</th></tr></thead>
       <tbody>
@@ -106,26 +106,26 @@
     <a href="images/raw_cdc_sample.png"><img src="images/raw_cdc_sample.png" alt="Raw CDC API response" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Small image goes here. Save it as <code>images/raw_cdc_sample.png</code>.</div>
   </div>
-  <figcaption><strong>Raw CDC API response.</strong> <span class="draft-inline">Add one sentence on what this shows.</span></figcaption>
+  <figcaption><strong>Raw CDC API response.</strong> <span class=>Displays the initial data retrieved from the CDC PLACES API. This lists raw county-level prevelance values for public health measures, such as depression.</span></figcaption>
 </figure>
       <figure>
   <div class="figbox">
     <a href="images/raw_census_sample.png"><img src="images/raw_census_sample.png" alt="Raw Census data" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Small image goes here. Save it as <code>images/raw_census_sample.png</code>.</div>
   </div>
-  <figcaption><strong>Raw Census data.</strong> <span class="draft-inline">Add one sentence on what this shows.</span></figcaption>
+  <figcaption><strong>Raw Census data.</strong> <span class=>Illustrates the raw American Community Survey 5-year data from the Census Bureau API. This shows demographic and socioeconmic measures across U.S. counties.</span></figcaption>
 </figure>
       <figure>
   <div class="figbox">
     <a href="images/clean_sample.png"><img src="images/clean_sample.png" alt="Cleaned data" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Small image goes here. Save it as <code>images/clean_sample.png</code>.</div>
   </div>
-  <figcaption><strong>Cleaned data.</strong> <span class="draft-inline">Add one sentence on what this shows.</span></figcaption>
+  <figcaption><strong>Cleaned data.</strong> <span class=>This sample is the fully merged, cleaned, and standardized dataset which contains 2,491 counties and 36 variables.</span></figcaption>
 </figure>
     </div>
 
     <h2 id="cleaning">Cleaning steps</h2>
-    <p class="draft">Add a short plain-language discussion of the cleaning decisions and why each was made.</p>
+    <p class=>The data cleaning process required a mulit-step pipeline to prepare the datasets for analysis. The API formats were standardized and missing/invalid survey codes were updated. Next, all the data sources were merged using each county's five-digit FIPS code. This worked well, as the FIPS codes are unique to each county. Lastly, counties with missing information in any core variable were removed to leave a total of 2,491 counties for analysis.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Step</th><th>What was done</th><th>Result</th></tr></thead>
       <tbody>
@@ -148,7 +148,7 @@
         <tr><td>Micro/Suburban</td><td class="num">656</td><td class="num">599</td><td class="num">9%</td></tr>
       </tbody>
     </table></div>
-    <p class="draft">Discuss this limitation in your own words: rural counties lost the largest share because small counties often have suppressed estimates.</p>
+    <p class=>The removal of counties with missing data disproportionally affected rural areas, as they had a 34% reduction compared to small percetnage losses in metro and suburban areas. This limitation occurs because rural counties tend to have supressed statistical estimates because of limited resources, lower populations, and increased isolation. This highlights the structural reporting bias of secondary public health datasets.</p>
 
     <h2 id="variables">Variables in the clean dataset</h2>
     <details>
@@ -196,14 +196,14 @@
     </details>
 
     <h2 id="explore">Exploring the data</h2>
-    <p class="draft">Add a short introduction to the figures. Every figure needs a title, labeled axes, color, and a two-sentence caption.</p>
+    <p class=>This exploratory data analysis explores how community conditions, mental health, and infant health vary across U.S. counties. </p>
     
     <figure>
       <div class="figbox">
         <a href="images/fig01.png"><img src="images/fig01.png" alt="Distribution of Low Birth Weight Across Counties" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 1 goes here. Save the image as <code>images/fig01.png</code>.<br>Idea: histogram of low birth weight</div>
       </div>
-      <figcaption><strong>Figure 1.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 1.</strong> <span class=>This histogram shows a right-skewed distribution of low birth weight percentages across U.S. counties. The national median of 8.1% of live births are affected by low birth weight. There is a cluster between 6& and 10%, with  a tail extending part 14% in vulnerable regions. </span></figcaption>
     </figure>
     
     <figure>
@@ -211,7 +211,7 @@
         <a href="images/fig02.png"><img src="images/fig02.png" alt="Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 2 goes here. Save the image as <code>images/fig02.png</code>.<br>Idea: boxplot of low birth weight by community type</div>
       </div>
-      <figcaption><strong>Figure 2.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 2.</strong> <span class=>This boxplot comapres low birth weight percentages across Metro, Micro/Suburban, and Rural communities. This shows similar medians for each community subtype, but wider variability and higher outlier extremes in rural counties. The structural spread shows rural environments experience differenct health vulnerability profiles compared to other community subtypes.</span></figcaption>
     </figure>
     
     <figure>
@@ -219,7 +219,7 @@
         <a href="images/fig03.png"><img src="images/fig03.png" alt="Correlation Between Key Community Variables" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 3 goes here. Save the image as <code>images/fig03.png</code>.<br>Idea: correlation heatmap of the numeric columns</div>
       </div>
-      <figcaption><strong>Figure 3.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 3.</strong> <span class=>The correlation heatmap shows bivariate relationships among numeric socioeconmic, behavioral, and health variables. There are strong positive associations between child poverty and low birth weight. Further median income shows inverse correlations with adverse health outocmes.</span></figcaption>
     </figure>
     
     <figure>
@@ -227,7 +227,7 @@
         <a href="images/fig04.png"><img src="images/fig04.png" alt="Child Poverty vs. Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 4 goes here. Save the image as <code>images/fig04.png</code>.<br>Idea: scatter of child poverty against low birth weight by community type</div>
       </div>
-      <figcaption><strong>Figure 4.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 4.</strong> <span class=>This scatter plot shows a positive relationship between child poverty and low birth weight. The high concentrations of child poverty track with elevated rates of low birth weight regardless of the geographic classification.</span></figcaption>
     </figure>
     
     <figure>
@@ -235,7 +235,7 @@
         <a href="images/fig05.png"><img src="images/fig05.png" alt="Frequent Mental Distress vs. Depression" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 5 goes here. Save the image as <code>images/fig05.png</code>.<br>Idea: scatter of frequent mental distress against depression</div>
       </div>
-      <figcaption><strong>Figure 5.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 5.</strong> <span class=>This scatter plot shows a positive correlations of 0.61 between mental distress and diagnosed depression prevelance. The trend line confirms that regional patterns of poor mental health generally scale uniformly across populations.</span></figcaption>
     </figure>
     
     <figure>
@@ -243,7 +243,7 @@
         <a href="images/fig06.png"><img src="images/fig06.png" alt="Infant Risk Tier Proportions by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 6 goes here. Save the image as <code>images/fig06.png</code>.<br>Idea: stacked bar chart of risk tier share within each community type</div>
       </div>
-      <figcaption><strong>Figure 6.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 6.</strong> <span class=>This stacked bar chart shows the proportional distribution of Low, Moderate, and Hight infant risk tiers within each community type. It seems that rural counties exhibit a slightly higher proportion of high-risk classifications in comparison to the metropolitan areas.</span></figcaption>
     </figure>
     
     <figure>
@@ -251,7 +251,7 @@
         <a href="images/fig07.png"><img src="images/fig07.png" alt="Primary Care Doctor Rate by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 7 goes here. Save the image as <code>images/fig07.png</code>.<br>Idea: boxplot of primary care access by community type</div>
       </div>
-      <figcaption><strong>Figure 7.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 7.</strong> <span class=>This boxplot evaluates primary care physician availability per capita across the community subtypes. There is a lower median of provider rates for rural and suburban counties. This highlights potential barriers to receiving healthcare in non-metropolitan areas.</span></figcaption>
     </figure>
     
     <figure>
@@ -259,7 +259,7 @@
         <a href="images/fig08.png"><img src="images/fig08.png" alt="Average Racial and Ethnic Makeup by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 8 goes here. Save the image as <code>images/fig08.png</code>.<br>Idea: grouped bar chart of racial and ethnic makeup by community type</div>
       </div>
-      <figcaption><strong>Figure 8.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 8.</strong> <span class=>This is a grouped bar chart summarizing the race and ethnic demographic compotistions across the community types. This further reflects the distinct demogrpahic distributions that help contextualize broader disparities.</span></figcaption>
     </figure>
     
     <figure>
@@ -267,7 +267,7 @@
         <a href="images/fig09.png"><img src="images/fig09.png" alt="Teen Birth Rate by Infant Risk Tier" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 9 goes here. Save the image as <code>images/fig09.png</code>.<br>Idea: boxplot of teen birth rate by infant risk tier</div>
       </div>
-      <figcaption><strong>Figure 9.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 9.</strong> <span class=>This boxplot shows the escalation of teen birth rates across counties categorized but Infant Risk Tier. Higher risk tiers correspond with elevated median teen birth rates and a wider spread.</span></figcaption>
     </figure>
     
     <figure>
@@ -275,7 +275,7 @@
         <a href="images/fig10.png"><img src="images/fig10.png" alt="Counties by Community Type Before and After Cleaning" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Figure 10 goes here. Save the image as <code>images/fig10.png</code>.<br>Idea: bar chart of community types before and after cleaning</div>
       </div>
-      <figcaption><strong>Figure 10.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+      <figcaption><strong>Figure 10.</strong> <span class=>This bar chart compares the county counts before and after data cleaning. This shows that there is a systemic loss of rural counties resulting from data supression and incomplete reporting.</span></figcaption>
     </figure>
 
 </main>

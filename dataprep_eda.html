@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DataPrep_EDA | Community Conditions and Infant Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 35 C3 23 2 10 10.5 6.5 C15.5 4.5 19 6.5 20 10.5 C21 6.5 24.5 4.5 29.5 6.5 C38 10 37 23 20 35 Z" fill="#a9cdf5"/><path d="M20 28.5 C13.5 24 13 19 16 17.5 C18 16.5 19.5 17.5 20 19.2 C20.5 17.5 22 16.5 24 17.5 C27 19 26.5 24 20 28.5 Z" fill="#ffe08a"/><path d="M33 3l1 2.3 2.3 1-2.3 1L33 9.6l-1-2.3-2.3-1 2.3-1z" fill="#b9a8e8"/></svg>
+      <span class="brand-text"><span class="site-title">Community Conditions and Infant Health</span><span class="site-sub">Mental Health, Community Conditions, and Infant Health Across US Counties</span></span>
+    </a>
+  </div>
+</header>
+<nav class="tabs" aria-label="Project sections">
+  <div class="wrap">
+    <ul>
+          <li><a class="tab" href="index.html">Introduction</a></li>
+          <li><a class="tab" href="dataprep_eda.html" aria-current="page">DataPrep_EDA</a></li>
+          <li><a class="tab" href="clustering.html">Clustering</a></li>
+          <li><a class="tab" href="pca.html">PCA</a></li>
+          <li><a class="tab" href="naivebayes.html">NaiveBayes</a></li>
+          <li><a class="tab" href="dectrees.html">DecTrees</a></li>
+          <li><a class="tab" href="svms.html">SVMs</a></li>
+          <li><a class="tab" href="regression.html">Regression</a></li>
+          <li><a class="tab" href="nn.html">NN</a></li>
+          <li><a class="tab" href="conclusions.html">Conclusions</a></li>
+          <li><a class="tab" href="about.html">About Me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="band">
+  <div class="wrap band-inner">
+    <div class="band-text">
+      <h1>DataPrep_EDA</h1>
+      <p class="lede">How the data was gathered, cleaned, and explored.</p>
+    </div>
+    <svg class="art" viewBox="0 0 150 110" aria-hidden="true"><g transform="translate(30 12)"><path d="M40 70 C6 46 4 20 21 13 C31 9 38 13 40 21 C42 13 49 9 59 13 C76 20 74 46 40 70 Z" fill="#a9cdf5"/><path d="M40 57 C27 48 26 38 32 35 C36 33 39 35 40 38.5 C41 35 44 33 48 35 C54 38 53 48 40 57 Z" fill="#ffe08a"/></g><g fill="#ffffff"><path d="M120 16l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/><path d="M22 28l1.6 3.8 3.8 1.6-3.8 1.6L22 38.8l-1.6-3.8-3.8-1.6 3.8-1.6z"/><path d="M130 74l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z"/></g><circle cx="108" cy="92" r="2.4" fill="#ffffff"/><circle cx="14" cy="66" r="2" fill="#ffffff"/></svg>
+  </div>
+  <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#bcd9f7" d="M0,70 C150,20 300,20 450,60 C600,100 750,30 900,40 C1050,50 1130,70 1200,55 L1200,120 L0,120 Z"/><path fill="#ffeeb5" d="M0,85 C120,55 260,50 400,80 C560,112 700,60 860,72 C1000,82 1100,96 1200,80 L1200,120 L0,120 Z"/><path fill="#c9ecdc" d="M0,100 C160,78 300,80 460,98 C620,114 760,84 920,92 C1050,98 1130,106 1200,96 L1200,120 L0,120 Z"/><path fill="#faf8fd" d="M0,111 C200,103 400,116 600,110 C800,104 1000,116 1200,108 L1200,120 L0,120 Z"/></svg>
+</div>
+<main id="main" class="wrap">
+
+    <ul class="contents">
+      <li><a href="#sources">Sources</a></li>
+      <li><a href="#apis">APIs</a></li>
+      <li><a href="#files">Files</a></li>
+      <li><a href="#samples">Raw and clean samples</a></li>
+      <li><a href="#cleaning">Cleaning</a></li>
+      <li><a href="#variables">Variables</a></li>
+      <li><a href="#explore">Exploration</a></li>
+    </ul>
+
+    <h2 id="sources">Where the data came from</h2>
+    <p class="draft">In your own words, explain how, where, and why each source was gathered, and how the sources fit the topic.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Source</th><th>Access</th><th>What it provides</th><th>Raw file</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://www.cdc.gov/places">CDC PLACES</a></td><td>API, no key</td><td>Frequent mental distress, short sleep, and depression by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_cdc_data.csv">raw_cdc_data.csv</a></td></tr>
+        <tr><td><a href="https://www.census.gov/data/developers/data-sets/acs-5year.html">US Census, American Community Survey 5-year (2022) Data Profile</a></td><td>API, key required</td><td>Income, education, housing, insurance, age, and family measures by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_census_data.csv">raw_census_data.csv</a></td></tr>
+        <tr><td><a href="https://www.countyhealthrankings.org">County Health Rankings and Roadmaps (2025)</a></td><td>CSV download</td><td>Birth weight, child poverty, health behaviors, clinical care, and air quality by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/analytic_data_2025.csv">analytic_data_2025.csv</a></td></tr>
+        <tr><td><a href="https://www.ers.usda.gov/data-products/rural-urban-continuum-codes">USDA Economic Research Service, Rural-Urban Continuum Codes (2023)</a></td><td>CSV download</td><td>Metro and non-metro classification of each county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/rural_urban_codes_2023.csv">rural_urban_codes_2023.csv</a></td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 id="apis">APIs used</h2>
+    <p>Two of the sources were gathered with Python through an API. The code is in <a href="https://github.com/isram1223/csci5612-project/blob/main/code/data_prep.py">data_prep.py</a>.</p>
+    <h3>CDC PLACES (Socrata API)</h3>
+    <p>Website: <a href="https://www.cdc.gov/places">cdc.gov/places</a>. Core endpoint: <code>https://chronicdata.cdc.gov/resource/swc5-untb.json</code>. Example GET request:</p>
+    <pre><code>https://chronicdata.cdc.gov/resource/swc5-untb.json?$select=year,stateabbr,locationname,locationid,measureid,data_value&amp;$where=measureid in(&#x27;MHLTH&#x27;,&#x27;SLEEP&#x27;,&#x27;DEPRESSION&#x27;) and datavaluetypeid=&#x27;CrdPrv&#x27;&amp;$limit=50000</code></pre>
+    <h3>US Census Bureau API</h3>
+    <p>Website: <a href="https://www.census.gov/data/developers/data-sets/acs-5year.html">census.gov, ACS 5-year data</a>. Core endpoint: <code>https://api.census.gov/data/2022/acs/acs5/profile</code>. A free key is required (<a href="https://api.census.gov/data/key_signup.html">key signup</a>). Example GET request, with the key left out:</p>
+    <pre><code>https://api.census.gov/data/2022/acs/acs5/profile?get=NAME,DP03_0062E,DP03_0099PE&amp;for=county:*&amp;in=state:*&amp;key=YOUR_KEY</code></pre>
+
+    <h2 id="files">Raw data, clean data, and code</h2>
+    <p>Every file is linked below. The full folders are on GitHub: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data</a>, <a href="https://github.com/isram1223/csci5612-project/tree/main/clean_data">clean_data</a>, and <a href="https://github.com/isram1223/csci5612-project/tree/main/code">code</a>.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>File</th><th>Description</th></tr></thead>
+      <tbody>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_cdc_data.csv">raw_cdc_data.csv</a></td><td>Raw CDC PLACES pull (2022 and 2023 release years)</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_cdc_api.json">raw_cdc_api.json</a></td><td>First records of the CDC API response</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_census_data.csv">raw_census_data.csv</a></td><td>Raw Census ACS pull, all counties and Puerto Rico municipalities</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_census_api.json">raw_census_api.json</a></td><td>First records of the Census API response</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/analytic_data_2025.csv">analytic_data_2025.csv</a></td><td>County Health Rankings 2025 analytic data, as downloaded</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/rural_urban_codes_2023.csv">rural_urban_codes_2023.csv</a></td><td>USDA Rural-Urban Continuum Codes, as downloaded</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_maternal_infant_health.csv">clean_maternal_infant_health.csv</a></td><td>Full cleaned dataset, 2,491 counties and 36 columns</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_unlabeled_numeric.csv">clean_unlabeled_numeric.csv</a></td><td>Numeric columns only, for clustering and PCA</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a></td><td>Features plus the infant risk tier label</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_community_type.csv">clean_labeled_community_type.csv</a></td><td>Features plus the community type label</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/code/data_prep.py">data_prep.py</a></td><td>Python script that gathers, cleans, and saves the data (packages: pandas, numpy, requests)</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/code/cleaning_log.txt">cleaning_log.txt</a></td><td>Step-by-step record of row counts during cleaning</td></tr>
+      </tbody>
+    </table></div>
+
+    <h2 id="samples">Raw and clean data samples</h2>
+    <div class="figrow">
+      <figure>
+  <div class="figbox">
+    <a href="images/raw_cdc_sample.png"><img src="images/raw_cdc_sample.png" alt="Raw CDC API response" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Small image goes here. Save it as <code>images/raw_cdc_sample.png</code>.</div>
+  </div>
+  <figcaption><strong>Raw CDC API response.</strong> <span class="draft-inline">Add one sentence on what this shows.</span></figcaption>
+</figure>
+      <figure>
+  <div class="figbox">
+    <a href="images/raw_census_sample.png"><img src="images/raw_census_sample.png" alt="Raw Census data" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Small image goes here. Save it as <code>images/raw_census_sample.png</code>.</div>
+  </div>
+  <figcaption><strong>Raw Census data.</strong> <span class="draft-inline">Add one sentence on what this shows.</span></figcaption>
+</figure>
+      <figure>
+  <div class="figbox">
+    <a href="images/clean_sample.png"><img src="images/clean_sample.png" alt="Cleaned data" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Small image goes here. Save it as <code>images/clean_sample.png</code>.</div>
+  </div>
+  <figcaption><strong>Cleaned data.</strong> <span class="draft-inline">Add one sentence on what this shows.</span></figcaption>
+</figure>
+    </div>
+
+    <h2 id="cleaning">Cleaning steps</h2>
+    <p class="draft">Add a short plain-language discussion of the cleaning decisions and why each was made.</p>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Step</th><th>What was done</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>CDC PLACES</td><td>The pull held rows from two release years. The most recent year available for each county and measure was kept, and the three measures were reshaped into one row per county.</td><td class="num">9,061 rows to 3,144 counties</td></tr>
+        <tr><td>Census ACS</td><td>Suppressed estimates, coded as large negative numbers such as -666666666, were converted to missing values.</td><td class="num">37 values set to missing</td></tr>
+        <tr><td>County Health Rankings</td><td>14 measures were selected. Percentages stored as proportions were multiplied by 100.</td><td class="num">3,204 rows</td></tr>
+        <tr><td>USDA codes</td><td>Codes 1 to 3 were grouped as Metro, 4 to 6 as Micro/Suburban, and 7 to 9 as Rural.</td><td class="num">3,233 counties</td></tr>
+        <tr><td>Merging</td><td>The four sources were joined on the five-digit county code. Rows without a match in all sources were dropped, including Puerto Rico municipalities that the other sources do not cover.</td><td class="num">3,222 to 3,143 counties</td></tr>
+        <tr><td>Checks</td><td>State total rows were removed, and percentage columns were checked to fall between 0 and 100.</td><td class="num">No rows affected</td></tr>
+        <tr><td>Missing values</td><td>Counties with a missing value in any column were removed. The columns with the most gaps were teen birth rate (242), depression and mental distress (187 each), mental health providers (171), primary care (166), low birth weight (108), and air pollution (85).</td><td class="num">652 removed, 2,491 remain</td></tr>
+        <tr><td>Label</td><td>Counties were split into three equal-size groups (Low_Risk, Moderate_Risk, High_Risk) by low birth weight.</td><td class="num">Final size 2,491 by 36</td></tr>
+      </tbody>
+    </table></div>
+    <h3>Effect of removing incomplete counties</h3>
+    <div class="table-wrap"><table>
+      <thead><tr><th>Community type</th><th class="num">Before</th><th class="num">After</th><th class="num">Share lost</th></tr></thead>
+      <tbody>
+        <tr><td>Rural</td><td class="num">1,301</td><td class="num">856</td><td class="num">34%</td></tr>
+        <tr><td>Metro</td><td class="num">1,186</td><td class="num">1,036</td><td class="num">13%</td></tr>
+        <tr><td>Micro/Suburban</td><td class="num">656</td><td class="num">599</td><td class="num">9%</td></tr>
+      </tbody>
+    </table></div>
+    <p class="draft">Discuss this limitation in your own words: rural counties lost the largest share because small counties often have suppressed estimates.</p>
+
+    <h2 id="variables">Variables in the clean dataset</h2>
+    <details>
+      <summary>Show all 36 columns</summary>
+      <div class="table-wrap"><table>
+        <thead><tr><th>Column</th><th>Source</th><th>Meaning</th></tr></thead>
+        <tbody>
+        <tr><td><code>fips</code></td><td>Identifier</td><td>Five-digit county code (state plus county)</td></tr>
+<tr><td><code>county, state</code></td><td>County Health Rankings</td><td>County name and state abbreviation</td></tr>
+<tr><td><code>total_population</code></td><td>Census ACS</td><td>Total population</td></tr>
+<tr><td><code>median_age</code></td><td>Census ACS</td><td>Median age in years</td></tr>
+<tr><td><code>under_18_pct</code></td><td>Census ACS</td><td>Percent of the population under 18</td></tr>
+<tr><td><code>over_64_pct</code></td><td>Census ACS</td><td>Percent of the population 65 and over</td></tr>
+<tr><td><code>single_mother_pct</code></td><td>Census ACS</td><td>Percent of women ages 15 to 50 with a birth in the past year who were widowed, divorced, or never married</td></tr>
+<tr><td><code>bachelors_pct</code></td><td>Census ACS</td><td>Percent of adults 25 and over with a bachelor's degree</td></tr>
+<tr><td><code>disability_pct</code></td><td>Census ACS</td><td>Percent of the civilian noninstitutionalized population with a disability</td></tr>
+<tr><td><code>unemployment_pct</code></td><td>Census ACS</td><td>Unemployment rate of the civilian labor force</td></tr>
+<tr><td><code>median_income</code></td><td>Census ACS</td><td>Median household income in 2022 inflation-adjusted dollars</td></tr>
+<tr><td><code>uninsured_pct</code></td><td>Census ACS</td><td>Percent without health insurance coverage</td></tr>
+<tr><td><code>vacant_housing_pct</code></td><td>Census ACS</td><td>Percent of housing units that are vacant</td></tr>
+<tr><td><code>renter_pct</code></td><td>Census ACS</td><td>Percent of occupied housing units that are renter-occupied</td></tr>
+<tr><td><code>no_vehicle_pct</code></td><td>Census ACS</td><td>Percent of occupied housing units with no vehicle</td></tr>
+<tr><td><code>median_rent</code></td><td>Census ACS</td><td>Median gross rent in dollars</td></tr>
+<tr><td><code>mental_distress_pct</code></td><td>CDC PLACES</td><td>Adults reporting frequent mental distress, crude prevalence in percent</td></tr>
+<tr><td><code>short_sleep_pct</code></td><td>CDC PLACES</td><td>Adults sleeping less than 7 hours, crude prevalence in percent</td></tr>
+<tr><td><code>depression_pct</code></td><td>CDC PLACES</td><td>Adults ever told they have a depressive disorder, crude prevalence in percent</td></tr>
+<tr><td><code>low_birthweight_pct</code></td><td>County Health Rankings</td><td>Percent of live births with low birth weight</td></tr>
+<tr><td><code>child_poverty_pct</code></td><td>County Health Rankings</td><td>Percent of children living in poverty</td></tr>
+<tr><td><code>smoking_pct</code></td><td>County Health Rankings</td><td>Percent of adults who smoke</td></tr>
+<tr><td><code>obesity_pct</code></td><td>County Health Rankings</td><td>Percent of adults with obesity</td></tr>
+<tr><td><code>inactivity_pct</code></td><td>County Health Rankings</td><td>Percent of adults who are physically inactive</td></tr>
+<tr><td><code>excessive_drinking_pct</code></td><td>County Health Rankings</td><td>Percent of adults reporting excessive drinking</td></tr>
+<tr><td><code>food_insecurity_pct</code></td><td>County Health Rankings</td><td>Percent of the population with food insecurity</td></tr>
+<tr><td><code>some_college_pct</code></td><td>County Health Rankings</td><td>Percent of adults ages 25 to 44 with some post-secondary education</td></tr>
+<tr><td><code>teen_birth_rate</code></td><td>County Health Rankings</td><td>Teen births as reported by County Health Rankings</td></tr>
+<tr><td><code>mental_health_provider_rate</code></td><td>County Health Rankings</td><td>Mental health providers as reported by County Health Rankings</td></tr>
+<tr><td><code>primary_care_rate</code></td><td>County Health Rankings</td><td>Primary care physicians as reported by County Health Rankings</td></tr>
+<tr><td><code>income_ratio</code></td><td>County Health Rankings</td><td>Ratio of higher-income to lower-income household income</td></tr>
+<tr><td><code>pm25</code></td><td>County Health Rankings</td><td>Average fine particulate matter in the air</td></tr>
+<tr><td><code>poor_mental_health_days</code></td><td>County Health Rankings</td><td>Average number of poor mental health days per month</td></tr>
+<tr><td><code>community_type</code></td><td>USDA</td><td>Metro, Micro/Suburban, or Rural, grouped from the 2023 Rural-Urban Continuum Codes</td></tr>
+<tr><td><code>infant_risk_tier</code></td><td>Derived</td><td>Low_Risk, Moderate_Risk, or High_Risk: three equal-size groups of counties by low birth weight</td></tr>
+        </tbody>
+      </table></div>
+    </details>
+
+    <h2 id="explore">Exploring the data</h2>
+    <p class="draft">Add a short introduction to the figures. Every figure needs a title, labeled axes, color, and a two-sentence caption.</p>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig01.png"><img src="images/fig01.png" alt="Figure 1: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 1 goes here. Save the image as <code>images/fig01.png</code>.<br>Idea: histogram of low birth weight</div>
+  </div>
+  <figcaption><strong>Figure 1.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig02.png"><img src="images/fig02.png" alt="Figure 2: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 2 goes here. Save the image as <code>images/fig02.png</code>.<br>Idea: boxplot of low birth weight by community type</div>
+  </div>
+  <figcaption><strong>Figure 2.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig03.png"><img src="images/fig03.png" alt="Figure 3: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 3 goes here. Save the image as <code>images/fig03.png</code>.<br>Idea: correlation heatmap of the numeric columns</div>
+  </div>
+  <figcaption><strong>Figure 3.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig04.png"><img src="images/fig04.png" alt="Figure 4: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 4 goes here. Save the image as <code>images/fig04.png</code>.<br>Idea: scatter of median income against low birth weight</div>
+  </div>
+  <figcaption><strong>Figure 4.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig05.png"><img src="images/fig05.png" alt="Figure 5: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 5 goes here. Save the image as <code>images/fig05.png</code>.<br>Idea: scatter of frequent mental distress against low birth weight</div>
+  </div>
+  <figcaption><strong>Figure 5.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig06.png"><img src="images/fig06.png" alt="Figure 6: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 6 goes here. Save the image as <code>images/fig06.png</code>.<br>Idea: counts of counties in each infant risk tier</div>
+  </div>
+  <figcaption><strong>Figure 6.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig07.png"><img src="images/fig07.png" alt="Figure 7: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 7 goes here. Save the image as <code>images/fig07.png</code>.<br>Idea: missing values by column before cleaning</div>
+  </div>
+  <figcaption><strong>Figure 7.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig08.png"><img src="images/fig08.png" alt="Figure 8: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 8 goes here. Save the image as <code>images/fig08.png</code>.<br>Idea: community type counts before and after cleaning</div>
+  </div>
+  <figcaption><strong>Figure 8.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig09.png"><img src="images/fig09.png" alt="Figure 9: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 9 goes here. Save the image as <code>images/fig09.png</code>.<br>Idea: histogram of median household income</div>
+  </div>
+  <figcaption><strong>Figure 9.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+    <figure>
+  <div class="figbox">
+    <a href="images/fig10.png"><img src="images/fig10.png" alt="Figure 10: describe the chart here" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+    <div class="ph">Figure 10 goes here. Save the image as <code>images/fig10.png</code>.<br>Idea: boxplot of depression rate by infant risk tier</div>
+  </div>
+  <figcaption><strong>Figure 10.</strong> <span class="draft-inline">Write two sentences describing what this figure shows.</span></figcaption>
+</figure>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>Website design by Claude, an AI assistant made by Anthropic.</p>
+    <p>CSCI 5612 course project. Data sources and code are linked on the <a href="dataprep_eda.html">DataPrep_EDA</a> page.</p>
+  </div>
+</footer>
+</body>
+</html>

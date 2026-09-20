@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PCA | Community Conditions and Infant Health</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 35 C3 23 2 10 10.5 6.5 C15.5 4.5 19 6.5 20 10.5 C21 6.5 24.5 4.5 29.5 6.5 C38 10 37 23 20 35 Z" fill="#a9cdf5"/><path d="M20 28.5 C13.5 24 13 19 16 17.5 C18 16.5 19.5 17.5 20 19.2 C20.5 17.5 22 16.5 24 17.5 C27 19 26.5 24 20 28.5 Z" fill="#ffe08a"/><path d="M33 3l1 2.3 2.3 1-2.3 1L33 9.6l-1-2.3-2.3-1 2.3-1z" fill="#b9a8e8"/></svg>
+      <span class="brand-text"><span class="site-title">Community Conditions and Infant Health</span><span class="site-sub">Mental Health, Community Conditions, and Infant Health Across US Counties</span></span>
+    </a>
+  </div>
+</header>
+<nav class="tabs" aria-label="Project sections">
+  <div class="wrap">
+    <ul>
+          <li><a class="tab" href="index.html">Introduction</a></li>
+          <li><a class="tab" href="dataprep_eda.html">DataPrep_EDA</a></li>
+          <li><a class="tab" href="clustering.html">Clustering</a></li>
+          <li><a class="tab" href="pca.html" aria-current="page">PCA</a></li>
+          <li><a class="tab" href="naivebayes.html">NaiveBayes</a></li>
+          <li><a class="tab" href="dectrees.html">DecTrees</a></li>
+          <li><a class="tab" href="svms.html">SVMs</a></li>
+          <li><a class="tab" href="regression.html">Regression</a></li>
+          <li><a class="tab" href="nn.html">NN</a></li>
+          <li><a class="tab" href="conclusions.html">Conclusions</a></li>
+          <li><a class="tab" href="about.html">About Me</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="band">
+  <div class="wrap band-inner">
+    <div class="band-text">
+      <h1>PCA</h1>
+      <p class="lede">Added in Project Part 2.</p>
+    </div>
+    <svg class="art" viewBox="0 0 150 110" aria-hidden="true"><g transform="translate(30 12)"><path d="M40 70 C6 46 4 20 21 13 C31 9 38 13 40 21 C42 13 49 9 59 13 C76 20 74 46 40 70 Z" fill="#a9cdf5"/><path d="M40 57 C27 48 26 38 32 35 C36 33 39 35 40 38.5 C41 35 44 33 48 35 C54 38 53 48 40 57 Z" fill="#ffe08a"/></g><g fill="#ffffff"><path d="M120 16l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/><path d="M22 28l1.6 3.8 3.8 1.6-3.8 1.6L22 38.8l-1.6-3.8-3.8-1.6 3.8-1.6z"/><path d="M130 74l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z"/></g><circle cx="108" cy="92" r="2.4" fill="#ffffff"/><circle cx="14" cy="66" r="2" fill="#ffffff"/></svg>
+  </div>
+  <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#bcd9f7" d="M0,70 C150,20 300,20 450,60 C600,100 750,30 900,40 C1050,50 1130,70 1200,55 L1200,120 L0,120 Z"/><path fill="#ffeeb5" d="M0,85 C120,55 260,50 400,80 C560,112 700,60 860,72 C1000,82 1100,96 1200,80 L1200,120 L0,120 Z"/><path fill="#c9ecdc" d="M0,100 C160,78 300,80 460,98 C620,114 760,84 920,92 C1050,98 1130,106 1200,96 L1200,120 L0,120 Z"/><path fill="#faf8fd" d="M0,111 C200,103 400,116 600,110 C800,104 1000,116 1200,108 L1200,120 L0,120 Z"/></svg>
+</div>
+<main id="main" class="wrap">
+
+    <h2>Overview</h2>
+    <p class="draft">Explain what principal component analysis is, how it works, and what it will be used for with this topic. Add an image.</p>
+
+    <h2>Data</h2>
+    <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_unlabeled_numeric.csv">clean_unlabeled_numeric.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
+    <p class="draft">Add a small image of the prepared data used for this method.</p>
+
+    <h2>Code</h2>
+    <p class="draft">Link the code and note the language and core packages. Do not paste the code.</p>
+
+    <h2>Results</h2>
+    <p class="draft">Describe, illustrate, and visualize the results, the parameters used, and what the results mean for the topic.</p>
+
+    <h2>Conclusions</h2>
+    <p class="draft">Explain what was learned that applies to the topic.</p>
+
+</main>
+<footer class="foot">
+  <div class="wrap">
+    <p>Website design by Claude, an AI assistant made by Anthropic.</p>
+    <p>CSCI 5612 course project. Data sources and code are linked on the <a href="dataprep_eda.html">DataPrep_EDA</a> page.</p>
+  </div>
+</footer>
+</body>
+</html>

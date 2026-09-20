@@ -5411,9 +5411,9 @@ FIPS,State,County_Name,Attribute,Value
 35011,NM,De Baca County,Population_2020,1698
 35011,NM,De Baca County,RUCC_2023,9
 35011,NM,De Baca County,Description,"Nonmetro - Urban population of fewer than 5,000, not adjacent to a metro area"
-35013,NM,DoÒa Ana County,Population_2020,219561
-35013,NM,DoÒa Ana County,RUCC_2023,3
-35013,NM,DoÒa Ana County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+35013,NM,Do√±a Ana County,Population_2020,219561
+35013,NM,Do√±a Ana County,RUCC_2023,3
+35013,NM,Do√±a Ana County,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
 35015,NM,Eddy County,Population_2020,62314
 35015,NM,Eddy County,RUCC_2023,5
 35015,NM,Eddy County,Description,"Nonmetro - Urban population of 20,000 or more, not adjacent to a metro area"
@@ -9474,9 +9474,9 @@ FIPS,State,County_Name,Attribute,Value
 72009,PR,Aibonito Municipio,Population_2020,24637
 72009,PR,Aibonito Municipio,RUCC_2023,1
 72009,PR,Aibonito Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72011,PR,AÒasco Municipio,Population_2020,25596
-72011,PR,AÒasco Municipio,RUCC_2023,2
-72011,PR,AÒasco Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+72011,PR,A√±asco Municipio,Population_2020,25596
+72011,PR,A√±asco Municipio,RUCC_2023,2
+72011,PR,A√±asco Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
 72013,PR,Arecibo Municipio,Population_2020,87754
 72013,PR,Arecibo Municipio,RUCC_2023,3
 72013,PR,Arecibo Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
@@ -9489,9 +9489,9 @@ FIPS,State,County_Name,Attribute,Value
 72019,PR,Barranquitas Municipio,Population_2020,28983
 72019,PR,Barranquitas Municipio,RUCC_2023,1
 72019,PR,Barranquitas Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72021,PR,BayamÛn Municipio,Population_2020,185187
-72021,PR,BayamÛn Municipio,RUCC_2023,1
-72021,PR,BayamÛn Municipio,Description,Metro - Counties in metro areas of 1 million population or more
+72021,PR,Bayam√≥n Municipio,Population_2020,185187
+72021,PR,Bayam√≥n Municipio,RUCC_2023,1
+72021,PR,Bayam√≥n Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72023,PR,Cabo Rojo Municipio,Population_2020,47158
 72023,PR,Cabo Rojo Municipio,RUCC_2023,3
 72023,PR,Cabo Rojo Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
@@ -9501,15 +9501,15 @@ FIPS,State,County_Name,Attribute,Value
 72027,PR,Camuy Municipio,Population_2020,32827
 72027,PR,Camuy Municipio,RUCC_2023,3
 72027,PR,Camuy Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
-72029,PR,CanÛvanas Municipio,Population_2020,42337
-72029,PR,CanÛvanas Municipio,RUCC_2023,1
-72029,PR,CanÛvanas Municipio,Description,Metro - Counties in metro areas of 1 million population or more
+72029,PR,Can√≥vanas Municipio,Population_2020,42337
+72029,PR,Can√≥vanas Municipio,RUCC_2023,1
+72029,PR,Can√≥vanas Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72031,PR,Carolina Municipio,Population_2020,154815
 72031,PR,Carolina Municipio,RUCC_2023,1
 72031,PR,Carolina Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72033,PR,CataÒo Municipio,Population_2020,23155
-72033,PR,CataÒo Municipio,RUCC_2023,1
-72033,PR,CataÒo Municipio,Description,Metro - Counties in metro areas of 1 million population or more
+72033,PR,Cata√±o Municipio,Population_2020,23155
+72033,PR,Cata√±o Municipio,RUCC_2023,1
+72033,PR,Cata√±o Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72035,PR,Cayey Municipio,Population_2020,41652
 72035,PR,Cayey Municipio,RUCC_2023,1
 72035,PR,Cayey Municipio,Description,Metro - Counties in metro areas of 1 million population or more
@@ -9525,9 +9525,9 @@ FIPS,State,County_Name,Attribute,Value
 72043,PR,Coamo Municipio,Population_2020,34668
 72043,PR,Coamo Municipio,RUCC_2023,4
 72043,PR,Coamo Municipio,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
-72045,PR,ComerÌo Municipio,Population_2020,18883
-72045,PR,ComerÌo Municipio,RUCC_2023,1
-72045,PR,ComerÌo Municipio,Description,Metro - Counties in metro areas of 1 million population or more
+72045,PR,Comer√≠o Municipio,Population_2020,18883
+72045,PR,Comer√≠o Municipio,RUCC_2023,1
+72045,PR,Comer√≠o Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72047,PR,Corozal Municipio,Population_2020,34571
 72047,PR,Corozal Municipio,RUCC_2023,1
 72047,PR,Corozal Municipio,Description,Metro - Counties in metro areas of 1 million population or more
@@ -9543,9 +9543,9 @@ FIPS,State,County_Name,Attribute,Value
 72054,PR,Florida Municipio,Population_2020,11692
 72054,PR,Florida Municipio,RUCC_2023,1
 72054,PR,Florida Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72055,PR,Gu·nica Municipio,Population_2020,13787
-72055,PR,Gu·nica Municipio,RUCC_2023,6
-72055,PR,Gu·nica Municipio,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
+72055,PR,Gu√°nica Municipio,Population_2020,13787
+72055,PR,Gu√°nica Municipio,RUCC_2023,6
+72055,PR,Gu√°nica Municipio,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
 72057,PR,Guayama Municipio,Population_2020,36614
 72057,PR,Guayama Municipio,RUCC_2023,3
 72057,PR,Guayama Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
@@ -9573,9 +9573,9 @@ FIPS,State,County_Name,Attribute,Value
 72073,PR,Jayuya Municipio,Population_2020,14779
 72073,PR,Jayuya Municipio,RUCC_2023,6
 72073,PR,Jayuya Municipio,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"
-72075,PR,Juana DÌaz Municipio,Population_2020,46538
-72075,PR,Juana DÌaz Municipio,RUCC_2023,2
-72075,PR,Juana DÌaz Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+72075,PR,Juana D√≠az Municipio,Population_2020,46538
+72075,PR,Juana D√≠az Municipio,RUCC_2023,2
+72075,PR,Juana D√≠az Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
 72077,PR,Juncos Municipio,Population_2020,37012
 72077,PR,Juncos Municipio,RUCC_2023,1
 72077,PR,Juncos Municipio,Description,Metro - Counties in metro areas of 1 million population or more
@@ -9585,30 +9585,30 @@ FIPS,State,County_Name,Attribute,Value
 72081,PR,Lares Municipio,Population_2020,28105
 72081,PR,Lares Municipio,RUCC_2023,4
 72081,PR,Lares Municipio,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
-72083,PR,Las MarÌas Municipio,Population_2020,8874
-72083,PR,Las MarÌas Municipio,RUCC_2023,8
-72083,PR,Las MarÌas Municipio,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
+72083,PR,Las Mar√≠as Municipio,Population_2020,8874
+72083,PR,Las Mar√≠as Municipio,RUCC_2023,8
+72083,PR,Las Mar√≠as Municipio,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
 72085,PR,Las Piedras Municipio,Population_2020,35180
 72085,PR,Las Piedras Municipio,RUCC_2023,1
 72085,PR,Las Piedras Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72087,PR,LoÌza Municipio,Population_2020,23693
-72087,PR,LoÌza Municipio,RUCC_2023,1
-72087,PR,LoÌza Municipio,Description,Metro - Counties in metro areas of 1 million population or more
+72087,PR,Lo√≠za Municipio,Population_2020,23693
+72087,PR,Lo√≠za Municipio,RUCC_2023,1
+72087,PR,Lo√≠za Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72089,PR,Luquillo Municipio,Population_2020,17781
 72089,PR,Luquillo Municipio,RUCC_2023,1
 72089,PR,Luquillo Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72091,PR,ManatÌ Municipio,Population_2020,39492
-72091,PR,ManatÌ Municipio,RUCC_2023,1
-72091,PR,ManatÌ Municipio,Description,Metro - Counties in metro areas of 1 million population or more
+72091,PR,Manat√≠ Municipio,Population_2020,39492
+72091,PR,Manat√≠ Municipio,RUCC_2023,1
+72091,PR,Manat√≠ Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72093,PR,Maricao Municipio,Population_2020,4755
 72093,PR,Maricao Municipio,RUCC_2023,8
 72093,PR,Maricao Municipio,Description,"Nonmetro - Urban population of fewer than 5,000, adjacent to a metro area"
 72095,PR,Maunabo Municipio,Population_2020,10589
 72095,PR,Maunabo Municipio,RUCC_2023,1
 72095,PR,Maunabo Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72097,PR,Mayag¸ez Municipio,Population_2020,73077
-72097,PR,Mayag¸ez Municipio,RUCC_2023,3
-72097,PR,Mayag¸ez Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+72097,PR,Mayag√ºez Municipio,Population_2020,73077
+72097,PR,Mayag√ºez Municipio,RUCC_2023,3
+72097,PR,Mayag√ºez Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
 72099,PR,Moca Municipio,Population_2020,37460
 72099,PR,Moca Municipio,RUCC_2023,2
 72099,PR,Moca Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
@@ -9627,39 +9627,39 @@ FIPS,State,County_Name,Attribute,Value
 72109,PR,Patillas Municipio,Population_2020,15985
 72109,PR,Patillas Municipio,RUCC_2023,3
 72109,PR,Patillas Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
-72111,PR,PeÒuelas Municipio,Population_2020,20399
-72111,PR,PeÒuelas Municipio,RUCC_2023,2
-72111,PR,PeÒuelas Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+72111,PR,Pe√±uelas Municipio,Population_2020,20399
+72111,PR,Pe√±uelas Municipio,RUCC_2023,2
+72111,PR,Pe√±uelas Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
 72113,PR,Ponce Municipio,Population_2020,137491
 72113,PR,Ponce Municipio,RUCC_2023,2
 72113,PR,Ponce Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
 72115,PR,Quebradillas Municipio,Population_2020,23638
 72115,PR,Quebradillas Municipio,RUCC_2023,3
 72115,PR,Quebradillas Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
-72117,PR,RincÛn Municipio,Population_2020,15187
-72117,PR,RincÛn Municipio,RUCC_2023,2
-72117,PR,RincÛn Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
-72119,PR,RÌo Grande Municipio,Population_2020,47060
-72119,PR,RÌo Grande Municipio,RUCC_2023,1
-72119,PR,RÌo Grande Municipio,Description,Metro - Counties in metro areas of 1 million population or more
+72117,PR,Rinc√≥n Municipio,Population_2020,15187
+72117,PR,Rinc√≥n Municipio,RUCC_2023,2
+72117,PR,Rinc√≥n Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+72119,PR,R√≠o Grande Municipio,Population_2020,47060
+72119,PR,R√≠o Grande Municipio,RUCC_2023,1
+72119,PR,R√≠o Grande Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72121,PR,Sabana Grande Municipio,Population_2020,22729
 72121,PR,Sabana Grande Municipio,RUCC_2023,3
 72121,PR,Sabana Grande Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
 72123,PR,Salinas Municipio,Population_2020,25789
 72123,PR,Salinas Municipio,RUCC_2023,4
 72123,PR,Salinas Municipio,Description,"Nonmetro - Urban population of 20,000 or more, adjacent to a metro area"
-72125,PR,San Germ·n Municipio,Population_2020,31879
-72125,PR,San Germ·n Municipio,RUCC_2023,3
-72125,PR,San Germ·n Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
+72125,PR,San Germ√°n Municipio,Population_2020,31879
+72125,PR,San Germ√°n Municipio,RUCC_2023,3
+72125,PR,San Germ√°n Municipio,Description,"Metro - Counties in metro areas of fewer than 250,000 population"
 72127,PR,San Juan Municipio,Population_2020,342259
 72127,PR,San Juan Municipio,RUCC_2023,1
 72127,PR,San Juan Municipio,Description,Metro - Counties in metro areas of 1 million population or more
 72129,PR,San Lorenzo Municipio,Population_2020,37693
 72129,PR,San Lorenzo Municipio,RUCC_2023,1
 72129,PR,San Lorenzo Municipio,Description,Metro - Counties in metro areas of 1 million population or more
-72131,PR,San Sebasti·n Municipio,Population_2020,39345
-72131,PR,San Sebasti·n Municipio,RUCC_2023,2
-72131,PR,San Sebasti·n Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
+72131,PR,San Sebasti√°n Municipio,Population_2020,39345
+72131,PR,San Sebasti√°n Municipio,RUCC_2023,2
+72131,PR,San Sebasti√°n Municipio,Description,"Metro - Counties in metro areas of 250,000 to 1 million population"
 72133,PR,Santa Isabel Municipio,Population_2020,20281
 72133,PR,Santa Isabel Municipio,RUCC_2023,6
 72133,PR,Santa Isabel Municipio,Description,"Nonmetro - Urban population of 5,000 to 20,000, adjacent to a metro area"

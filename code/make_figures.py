@@ -225,11 +225,12 @@ save(fig, "fig08.png")
 #Teen birth rate by risk tier
 fig, ax = plt.subplots(figsize=(8, 5))
 groups = [df.loc[df["infant_risk_tier"] == t, "teen_birth_rate"].dropna() for t in TIER_ORDER]
+risk_box_colors = {"Low_Risk": BLUE, "Moderate_Risk": BUTTER, "High_Risk": MINT}
 bp = ax.boxplot(groups, patch_artist=True, widths=0.55,
                 medianprops={"color": INK, "linewidth": 2},
                 flierprops={"marker": "o", "markersize": 3, "alpha": 0.4})
 for patch, t in zip(bp["boxes"], TIER_ORDER):
-    patch.set_facecolor(TIER_COLORS[t])
+    patch.set_facecolor(risk_box_colors[t])
 ax.set_xticklabels(TIER_ORDER)
 ax.set_title("Teen Birth Rate by Infant Risk Tier")
 ax.set_xlabel("Infant risk tier")

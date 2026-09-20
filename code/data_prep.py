@@ -62,6 +62,11 @@ CHR_MEASURES = {
     "Income Inequality": ("income_ratio", 1),
     "Air Pollution: Particulate Matter": ("pm25", 1),
     "Poor Mental Health Days": ("poor_mental_health_days", 1),
+    "% Non-Hispanic Black": ("black_pct", 100),
+    "% Hispanic": ("hispanic_pct", 100),
+    "% Asian": ("asian_pct", 100),
+    "% American Indian or Alaska Native": ("native_american_pct", 100),
+    "% Non-Hispanic White": ("white_pct", 100),
 }
 
 log_lines = []

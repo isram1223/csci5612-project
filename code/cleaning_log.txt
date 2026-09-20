@@ -3,7 +3,7 @@ CDC: release years in pull: ['2022', '2023']
 CDC: 3144 counties after reshaping
 Census: 3222 raw rows
 Census: 37 suppressed values set to NaN
-CHR: 3204 rows, 14 measures kept
+CHR: 3204 rows, 19 measures kept
 USDA: 3233 counties
 Merge with CDC: 3222 -> 3143 rows
 Merge with CHR: 3143 -> 3143 rows
@@ -13,4 +13,4 @@ Missing values by column: {'single_mother_pct': 26, 'median_rent': 9, 'depressio
 Community types before: {'Rural': 1301, 'Metro': 1186, 'Micro/Suburban': 656}
 Dropped 652 rows with missing values, 2491 remain
 Community types after: {'Metro': 1036, 'Rural': 856, 'Micro/Suburban': 599}
-Saved clean files. Full dataset shape: (2491, 36)
+Saved clean files. Full dataset shape: (2491, 41)

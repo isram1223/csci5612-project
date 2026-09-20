@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DataPrep_EDA | Community Conditions and Infant Health</title>
+<title>DataPrep_EDA | Maternal and Infant Health Across US Counties</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
 <header class="top">
   <div class="wrap">
     <a class="brand" href="index.html">
-      <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 35 C3 23 2 10 10.5 6.5 C15.5 4.5 19 6.5 20 10.5 C21 6.5 24.5 4.5 29.5 6.5 C38 10 37 23 20 35 Z" fill="#a9cdf5"/><path d="M20 28.5 C13.5 24 13 19 16 17.5 C18 16.5 19.5 17.5 20 19.2 C20.5 17.5 22 16.5 24 17.5 C27 19 26.5 24 20 28.5 Z" fill="#ffe08a"/><path d="M33 3l1 2.3 2.3 1-2.3 1L33 9.6l-1-2.3-2.3-1 2.3-1z" fill="#b9a8e8"/></svg>
-      <span class="brand-text"><span class="site-title">Community Conditions and Infant Health</span><span class="site-sub">Mental Health, Community Conditions, and Infant Health Across US Counties</span></span>
+      <img class="logo" src="logo.svg" alt="" aria-hidden="true">
+      <span class="brand-text"><span class="site-title">Maternal and Infant Health Across US Counties</span><span class="site-sub">Mental Health, Community Conditions, and Access to Care</span></span>
     </a>
   </div>
 </header>
@@ -42,9 +42,9 @@
       <h1>DataPrep_EDA</h1>
       <p class="lede">How the data was gathered, cleaned, and explored.</p>
     </div>
-    <svg class="art" viewBox="0 0 150 110" aria-hidden="true"><g transform="translate(30 12)"><path d="M40 70 C6 46 4 20 21 13 C31 9 38 13 40 21 C42 13 49 9 59 13 C76 20 74 46 40 70 Z" fill="#a9cdf5"/><path d="M40 57 C27 48 26 38 32 35 C36 33 39 35 40 38.5 C41 35 44 33 48 35 C54 38 53 48 40 57 Z" fill="#ffe08a"/></g><g fill="#ffffff"><path d="M120 16l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/><path d="M22 28l1.6 3.8 3.8 1.6-3.8 1.6L22 38.8l-1.6-3.8-3.8-1.6 3.8-1.6z"/><path d="M130 74l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z"/></g><circle cx="108" cy="92" r="2.4" fill="#ffffff"/><circle cx="14" cy="66" r="2" fill="#ffffff"/></svg>
+    <img class="art" src="art.svg" alt="" aria-hidden="true">
   </div>
-  <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#bcd9f7" d="M0,70 C150,20 300,20 450,60 C600,100 750,30 900,40 C1050,50 1130,70 1200,55 L1200,120 L0,120 Z"/><path fill="#ffeeb5" d="M0,85 C120,55 260,50 400,80 C560,112 700,60 860,72 C1000,82 1100,96 1200,80 L1200,120 L0,120 Z"/><path fill="#c9ecdc" d="M0,100 C160,78 300,80 460,98 C620,114 760,84 920,92 C1050,98 1130,106 1200,96 L1200,120 L0,120 Z"/><path fill="#faf8fd" d="M0,111 C200,103 400,116 600,110 C800,104 1000,116 1200,108 L1200,120 L0,120 Z"/></svg>
+  <img class="hills" src="hills.svg" alt="" aria-hidden="true">
 </div>
 <main id="main" class="wrap">
 
@@ -65,7 +65,7 @@
       <tbody>
         <tr><td><a href="https://www.cdc.gov/places">CDC PLACES</a></td><td>API, no key</td><td>Frequent mental distress, short sleep, and depression by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_cdc_data.csv">raw_cdc_data.csv</a></td></tr>
         <tr><td><a href="https://www.census.gov/data/developers/data-sets/acs-5year.html">US Census, American Community Survey 5-year (2022) Data Profile</a></td><td>API, key required</td><td>Income, education, housing, insurance, age, and family measures by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_census_data.csv">raw_census_data.csv</a></td></tr>
-        <tr><td><a href="https://www.countyhealthrankings.org">County Health Rankings and Roadmaps (2025)</a></td><td>CSV download</td><td>Birth weight, child poverty, health behaviors, clinical care, and air quality by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/analytic_data_2025.csv">analytic_data_2025.csv</a></td></tr>
+        <tr><td><a href="https://www.countyhealthrankings.org">County Health Rankings and Roadmaps (2025)</a></td><td>CSV download</td><td>Birth weight, child poverty, health behaviors, clinical care, air quality, and racial and ethnic makeup by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/analytic_data_2025.csv">analytic_data_2025.csv</a></td></tr>
         <tr><td><a href="https://www.ers.usda.gov/data-products/rural-urban-continuum-codes">USDA Economic Research Service, Rural-Urban Continuum Codes (2023)</a></td><td>CSV download</td><td>Metro and non-metro classification of each county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/rural_urban_codes_2023.csv">rural_urban_codes_2023.csv</a></td></tr>
       </tbody>
     </table></div>
@@ -90,7 +90,7 @@
         <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_census_api.json">raw_census_api.json</a></td><td>First records of the Census API response</td></tr>
         <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/analytic_data_2025.csv">analytic_data_2025.csv</a></td><td>County Health Rankings 2025 analytic data, as downloaded</td></tr>
         <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/rural_urban_codes_2023.csv">rural_urban_codes_2023.csv</a></td><td>USDA Rural-Urban Continuum Codes, as downloaded</td></tr>
-        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_maternal_infant_health.csv">clean_maternal_infant_health.csv</a></td><td>Full cleaned dataset, 2,491 counties and 36 columns</td></tr>
+        <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_maternal_infant_health.csv">clean_maternal_infant_health.csv</a></td><td>Full cleaned dataset, 2,491 counties and 41 columns</td></tr>
         <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_unlabeled_numeric.csv">clean_unlabeled_numeric.csv</a></td><td>Numeric columns only, for clustering and PCA</td></tr>
         <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a></td><td>Features plus the infant risk tier label</td></tr>
         <tr><td><a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_community_type.csv">clean_labeled_community_type.csv</a></td><td>Features plus the community type label</td></tr>
@@ -131,12 +131,12 @@
       <tbody>
         <tr><td>CDC PLACES</td><td>The pull held rows from two release years. The most recent year available for each county and measure was kept, and the three measures were reshaped into one row per county.</td><td class="num">9,061 rows to 3,144 counties</td></tr>
         <tr><td>Census ACS</td><td>Suppressed estimates, coded as large negative numbers such as -666666666, were converted to missing values.</td><td class="num">37 values set to missing</td></tr>
-        <tr><td>County Health Rankings</td><td>14 measures were selected. Percentages stored as proportions were multiplied by 100.</td><td class="num">3,204 rows</td></tr>
+        <tr><td>County Health Rankings</td><td>19 measures were selected, including five racial and ethnic makeup measures. Percentages stored as proportions were multiplied by 100.</td><td class="num">3,204 rows</td></tr>
         <tr><td>USDA codes</td><td>Codes 1 to 3 were grouped as Metro, 4 to 6 as Micro/Suburban, and 7 to 9 as Rural.</td><td class="num">3,233 counties</td></tr>
         <tr><td>Merging</td><td>The four sources were joined on the five-digit county code. Rows without a match in all sources were dropped, including Puerto Rico municipalities that the other sources do not cover.</td><td class="num">3,222 to 3,143 counties</td></tr>
         <tr><td>Checks</td><td>State total rows were removed, and percentage columns were checked to fall between 0 and 100.</td><td class="num">No rows affected</td></tr>
         <tr><td>Missing values</td><td>Counties with a missing value in any column were removed. The columns with the most gaps were teen birth rate (242), depression and mental distress (187 each), mental health providers (171), primary care (166), low birth weight (108), and air pollution (85).</td><td class="num">652 removed, 2,491 remain</td></tr>
-        <tr><td>Label</td><td>Counties were split into three equal-size groups (Low_Risk, Moderate_Risk, High_Risk) by low birth weight.</td><td class="num">Final size 2,491 by 36</td></tr>
+        <tr><td>Label</td><td>Counties were split into three equal-size groups (Low_Risk, Moderate_Risk, High_Risk) by low birth weight.</td><td class="num">Final size 2,491 by 41</td></tr>
       </tbody>
     </table></div>
     <h3>Effect of removing incomplete counties</h3>
@@ -152,7 +152,7 @@
 
     <h2 id="variables">Variables in the clean dataset</h2>
     <details>
-      <summary>Show all 36 columns</summary>
+      <summary>Show all 41 columns</summary>
       <div class="table-wrap"><table>
         <thead><tr><th>Column</th><th>Source</th><th>Meaning</th></tr></thead>
         <tbody>
@@ -189,6 +189,11 @@
 <tr><td><code>income_ratio</code></td><td>County Health Rankings</td><td>Ratio of higher-income to lower-income household income</td></tr>
 <tr><td><code>pm25</code></td><td>County Health Rankings</td><td>Average fine particulate matter in the air</td></tr>
 <tr><td><code>poor_mental_health_days</code></td><td>County Health Rankings</td><td>Average number of poor mental health days per month</td></tr>
+<tr><td><code>black_pct</code></td><td>County Health Rankings</td><td>Percent of the county population that is Non-Hispanic Black (community makeup, not mothers or births)</td></tr>
+<tr><td><code>hispanic_pct</code></td><td>County Health Rankings</td><td>Percent of the county population that is Hispanic</td></tr>
+<tr><td><code>asian_pct</code></td><td>County Health Rankings</td><td>Percent of the county population that is Asian</td></tr>
+<tr><td><code>native_american_pct</code></td><td>County Health Rankings</td><td>Percent of the county population that is American Indian or Alaska Native</td></tr>
+<tr><td><code>white_pct</code></td><td>County Health Rankings</td><td>Percent of the county population that is Non-Hispanic White</td></tr>
 <tr><td><code>community_type</code></td><td>USDA</td><td>Metro, Micro/Suburban, or Rural, grouped from the 2023 Rural-Urban Continuum Codes</td></tr>
 <tr><td><code>infant_risk_tier</code></td><td>Derived</td><td>Low_Risk, Moderate_Risk, or High_Risk: three equal-size groups of counties by low birth weight</td></tr>
         </tbody>

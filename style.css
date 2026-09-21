@@ -44,7 +44,7 @@ a:hover { text-decoration-thickness: 2px; }
 /* brand */
 .top { background: var(--white); }
 .brand { display: flex; align-items: center; gap: 12px; padding: 16px 0 10px; color: var(--ink); text-decoration: none; }
-.logo { width: 34px; height: 34px; flex: none; }
+.logo { width: 44px; height: 44px; flex: none; }
 .brand-text { display: flex; flex-direction: column; line-height: 1.25; }
 .site-title { font-family: var(--display); font-weight: 600; font-size: 1.15rem; }
 .site-sub { color: var(--muted); font-size: 0.85rem; }

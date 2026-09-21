@@ -15,7 +15,7 @@
   <div class="wrap">
     <a class="brand" href="index.html">
       <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 35 C3 23 2 10 10.5 6.5 C15.5 4.5 19 6.5 20 10.5 C21 6.5 24.5 4.5 29.5 6.5 C38 10 37 23 20 35 Z" fill="#a9cdf5"/><path d="M20 28.5 C13.5 24 13 19 16 17.5 C18 16.5 19.5 17.5 20 19.2 C20.5 17.5 22 16.5 24 17.5 C27 19 26.5 24 20 28.5 Z" fill="#ffe08a"/><path d="M33 3l1 2.3 2.3 1-2.3 1L33 9.6l-1-2.3-2.3-1 2.3-1z" fill="#b9a8e8"/></svg>
-      <span class="brand-text"><span class="site-title">Community Conditions and Infant Health</span><span class="site-sub">Mental Health, Access to Care, and Maternal and Infant Health Across US Counties</span></span>
+      <span class="brand-text"><span class="site-title">Community Conditions and Infant Health</span><span class="site-sub">Mental Health, Community Conditions, and Infant Health Across US Counties</span></span>
     </a>
   </div>
 </header>
@@ -59,13 +59,13 @@
     </ul>
 
     <h2 id="sources">Where the data came from</h2>
-    <p>Four distinct public data sources were combined to analyze the relationships between community conditions, mental health, and infant health outcomes across United States counties. The CDC PLACES dataset and the US Census American Community Survey provide standardized health prevalence and socioeconomic measures, gathered through APIs. The County Health Rankings and USDA Rural-Urban Continuum Codes add maternal-child health indicators and geographic classifications. Combining these sources provides a multidimensional foundation for evaluating how environmental, structural, and mental health factors relate to infant health.</p>
+    <p>Four distinct public data sources were aggregated to analyze the relationships between community conditions, mental health, and infant health outcomes across United States counties. The CDC PLACES dataset and US Census American Community Survey give standardized health prevalence and socioeconomic metrics gathered via APIs. The County Health Rankings and USDA Rural-Urban Continuum Codes further offer maternal-child health indicators and geographic classifications. Combining these sources together provides a multi-dimensional foundation for evaluating how environmental, structural, and mental health factors impact infant health.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Source</th><th>Access</th><th>What it provides</th><th>Raw file</th></tr></thead>
       <tbody>
         <tr><td><a href="https://www.cdc.gov/places">CDC PLACES</a></td><td>API, no key</td><td>Frequent mental distress, short sleep, and depression by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_cdc_data.csv">raw_cdc_data.csv</a></td></tr>
         <tr><td><a href="https://www.census.gov/data/developers/data-sets/acs-5year.html">US Census, American Community Survey 5-year (2022) Data Profile</a></td><td>API, key required</td><td>Income, education, housing, insurance, age, and family measures by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/raw_census_data.csv">raw_census_data.csv</a></td></tr>
-        <tr><td><a href="https://www.countyhealthrankings.org">County Health Rankings and Roadmaps (2025)</a></td><td>CSV download</td><td>Birth weight, child poverty, health behaviors, clinical care, air quality, and racial and ethnic makeup by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/analytic_data_2025.csv">analytic_data_2025.csv</a></td></tr>
+        <tr><td><a href="https://www.countyhealthrankings.org">County Health Rankings and Roadmaps (2025)</a></td><td>CSV download</td><td>Birth weight, child poverty, health behaviors, clinical care, and air quality by county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/analytic_data_2025.csv">analytic_data_2025.csv</a></td></tr>
         <tr><td><a href="https://www.ers.usda.gov/data-products/rural-urban-continuum-codes">USDA Economic Research Service, Rural-Urban Continuum Codes (2023)</a></td><td>CSV download</td><td>Metro and non-metro classification of each county</td><td><a href="https://github.com/isram1223/csci5612-project/blob/main/raw_data/rural_urban_codes_2023.csv">rural_urban_codes_2023.csv</a></td></tr>
       </tbody>
     </table></div>
@@ -106,32 +106,32 @@
     <a href="images/raw_cdc_sample.png"><img src="images/raw_cdc_sample.png" alt="Raw CDC API response" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Small image goes here. Save it as <code>images/raw_cdc_sample.png</code>.</div>
   </div>
-  <figcaption><strong>Raw CDC API response.</strong> <span>This sample shows the initial county-level prevalence values retrieved from the CDC PLACES API for public health measures such as depression.</span></figcaption>
+  <figcaption><strong>Raw CDC API response.</strong> <span>Displays the initial data retrieved from the CDC PLACES API. This lists raw county-level prevalence values for public health measures, such as depression.</span></figcaption>
 </figure>
       <figure>
   <div class="figbox">
     <a href="images/raw_census_sample.png"><img src="images/raw_census_sample.png" alt="Raw Census data" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Small image goes here. Save it as <code>images/raw_census_sample.png</code>.</div>
   </div>
-  <figcaption><strong>Raw Census data.</strong> <span>This sample shows the raw American Community Survey 5-year data from the Census Bureau API, with demographic and socioeconomic measures for U.S. counties.</span></figcaption>
+  <figcaption><strong>Raw Census data.</strong> <span>Illustrates the raw American Community Survey 5-year data from the Census Bureau API. This shows demographic and socioeconomic measures across U.S. counties.</span></figcaption>
 </figure>
       <figure>
   <div class="figbox">
     <a href="images/clean_sample.png"><img src="images/clean_sample.png" alt="Cleaned data" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Small image goes here. Save it as <code>images/clean_sample.png</code>.</div>
   </div>
-  <figcaption><strong>Cleaned data.</strong> <span>This sample shows the merged and cleaned dataset, which contains 2,491 counties and 41 variables.</span></figcaption>
+  <figcaption><strong>Cleaned data.</strong> <span>This sample is the fully merged, cleaned, and standardized dataset which contains 2,491 counties and 41 variables.</span></figcaption>
 </figure>
     </div>
 
     <h2 id="cleaning">Cleaning steps</h2>
-    <p>The data cleaning process required a multi-step pipeline to prepare the datasets for analysis. The API formats were standardized, and missing or invalid survey codes were converted to missing values. Next, all the data sources were merged using each county's five-digit FIPS code, which is unique to each county. Lastly, counties with missing information in any variable were removed, leaving 2,491 counties for analysis.</p>
+    <p>The data cleaning process required a multi-step pipeline to prepare the datasets for analysis. The API formats were standardized and missing/invalid survey codes were updated. Next, all the data sources were merged using each county's five-digit FIPS code. This worked well, as the FIPS codes are unique to each county. Lastly, counties with missing information in any core variable were removed to leave a total of 2,491 counties for analysis.</p>
     <div class="table-wrap"><table>
       <thead><tr><th>Step</th><th>What was done</th><th>Result</th></tr></thead>
       <tbody>
         <tr><td>CDC PLACES</td><td>The pull held rows from two release years. The most recent year available for each county and measure was kept, and the three measures were reshaped into one row per county.</td><td class="num">9,061 rows to 3,144 counties</td></tr>
         <tr><td>Census ACS</td><td>Suppressed estimates, coded as large negative numbers such as -666666666, were converted to missing values.</td><td class="num">37 values set to missing</td></tr>
-        <tr><td>County Health Rankings</td><td>19 measures were selected, including five racial and ethnic makeup measures. Percentages stored as proportions were multiplied by 100.</td><td class="num">3,204 rows</td></tr>
+        <tr><td>County Health Rankings</td><td>19 measures were selected. Percentages stored as proportions were multiplied by 100.</td><td class="num">3,204 rows</td></tr>
         <tr><td>USDA codes</td><td>Codes 1 to 3 were grouped as Metro, 4 to 6 as Micro/Suburban, and 7 to 9 as Rural.</td><td class="num">3,233 counties</td></tr>
         <tr><td>Merging</td><td>The four sources were joined on the five-digit county code. Rows without a match in all sources were dropped, including Puerto Rico municipalities that the other sources do not cover.</td><td class="num">3,222 to 3,143 counties</td></tr>
         <tr><td>Checks</td><td>State total rows were removed, and percentage columns were checked to fall between 0 and 100.</td><td class="num">No rows affected</td></tr>
@@ -148,7 +148,7 @@
         <tr><td>Micro/Suburban</td><td class="num">656</td><td class="num">599</td><td class="num">9%</td></tr>
       </tbody>
     </table></div>
-    <p>Removing counties with missing data affected rural areas the most, which lost 34% of their counties compared with 13% for metro and 9% for micro/suburban areas. This likely occurs because small counties often have too few births or survey responses for estimates to be reported reliably, so those estimates are suppressed. As a result, the cleaned dataset under-represents rural counties, which limits how far the findings can be generalized.</p>
+    <p>The removal of counties with missing data disproportionally affected rural areas, as they had a 34% reduction compared to small percentage losses in metro and suburban areas. This limitation occurs because rural counties tend to have suppressed statistical estimates because of limited resources, lower populations, and increased isolation. This highlights the structural reporting bias of secondary public health datasets.</p>
 
     <h2 id="variables">Variables in the clean dataset</h2>
     <details>
@@ -201,76 +201,76 @@
     </details>
 
     <h2 id="explore">Exploring the data</h2>
-    <p>The figures below explore how community conditions, mental health, and infant health vary across U.S. counties.</p>
+    <p>This exploratory data analysis explores how community conditions, mental health, and infant health vary across U.S. counties.</p>
     <figure>
   <div class="figbox">
     <a href="images/fig01.png"><img src="images/fig01.png" alt="Distribution of Low Birth Weight Across Counties" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 1 goes here. Save the image as <code>images/fig01.png</code>.<br>Idea: histogram of low birth weight</div>
   </div>
-  <figcaption><strong>Figure 1.</strong> <span>This histogram shows the distribution of low birth weight percentages across U.S. counties, with most counties clustered between about 6% and 10%. The median county has 8.1% of births at low birth weight, and a tail of counties extends past 14%.</span></figcaption>
+  <figcaption><strong>Figure 1.</strong> <span>This histogram shows a right-skewed distribution of low birth weight percentages across U.S. counties. The national median of 8.1% of live births are affected by low birth weight. There is a cluster between 6% and 10%, with a tail extending past 14% in vulnerable regions.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig02.png"><img src="images/fig02.png" alt="Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 2 goes here. Save the image as <code>images/fig02.png</code>.<br>Idea: boxplot of low birth weight by community type</div>
   </div>
-  <figcaption><strong>Figure 2.</strong> <span>This boxplot compares low birth weight percentages across Metro, Micro/Suburban, and Rural counties. Medians are similar across the three groups, but rural counties show wider variability and more extreme high values.</span></figcaption>
+  <figcaption><strong>Figure 2.</strong> <span>This boxplot compares low birth weight percentages across Metro, Micro/Suburban, and Rural communities. This shows similar medians for each community subtype, but wider variability and higher outlier extremes in rural counties. The structural spread shows rural environments experience different health vulnerability profiles compared to other community subtypes.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig03.png"><img src="images/fig03.png" alt="Correlation Between Key Community Variables" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 3 goes here. Save the image as <code>images/fig03.png</code>.<br>Idea: correlation heatmap of the numeric columns</div>
   </div>
-  <figcaption><strong>Figure 3.</strong> <span>The correlation heatmap shows how the main socioeconomic, behavioral, and health variables relate to one another. Child poverty is positively associated with low birth weight, while median income is negatively associated with it.</span></figcaption>
+  <figcaption><strong>Figure 3.</strong> <span>The correlation heatmap shows bivariate relationships among numeric socioeconomic, behavioral, and health variables. There are strong positive associations between child poverty and low birth weight. Further median income shows inverse correlations with adverse health outcomes.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig04.png"><img src="images/fig04.png" alt="Child Poverty vs. Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 4 goes here. Save the image as <code>images/fig04.png</code>.<br>Idea: scatter of child poverty against low birth weight by community type</div>
   </div>
-  <figcaption><strong>Figure 4.</strong> <span>This scatter plot shows a positive relationship between child poverty and low birth weight. The pattern appears in all three community types.</span></figcaption>
+  <figcaption><strong>Figure 4.</strong> <span>This scatter plot shows a positive relationship between child poverty and low birth weight. The high concentrations of child poverty track with elevated rates of low birth weight regardless of the geographic classification.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig05.png"><img src="images/fig05.png" alt="Frequent Mental Distress vs. Depression" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 5 goes here. Save the image as <code>images/fig05.png</code>.<br>Idea: scatter of frequent mental distress against depression</div>
   </div>
-  <figcaption><strong>Figure 5.</strong> <span>This scatter plot shows a positive correlation of 0.61 between frequent mental distress and depression. The trend line shows that counties with more mental distress also tend to have more depression.</span></figcaption>
+  <figcaption><strong>Figure 5.</strong> <span>This scatter plot shows a positive correlation of 0.61 between mental distress and diagnosed depression prevalence. The trend line confirms that regional patterns of poor mental health generally scale uniformly across populations.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig06.png"><img src="images/fig06.png" alt="Infant Risk Tier Proportions by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 6 goes here. Save the image as <code>images/fig06.png</code>.<br>Idea: stacked bar chart of risk tier share within each community type</div>
   </div>
-  <figcaption><strong>Figure 6.</strong> <span>This stacked bar chart shows the share of Low, Moderate, and High infant risk counties within each community type. Rural counties have a slightly higher share of high-risk counties than metro counties.</span></figcaption>
+  <figcaption><strong>Figure 6.</strong> <span>This stacked bar chart shows the proportional distribution of Low, Moderate, and High infant risk tiers within each community type. It seems that rural counties exhibit a slightly higher proportion of high-risk classifications in comparison to the metropolitan areas.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig07.png"><img src="images/fig07.png" alt="Primary Care Doctor Rate by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 7 goes here. Save the image as <code>images/fig07.png</code>.<br>Idea: boxplot of primary care access by community type</div>
   </div>
-  <figcaption><strong>Figure 7.</strong> <span>This boxplot compares the primary care doctor rate across community types. Rural and micro/suburban counties have lower median rates than metro counties, which may point to barriers to care outside metro areas.</span></figcaption>
+  <figcaption><strong>Figure 7.</strong> <span>This boxplot evaluates primary care physician availability per capita across the community subtypes. There is a lower median of provider rates for rural and suburban counties. This highlights potential barriers to receiving healthcare in non-metropolitan areas.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig08.png"><img src="images/fig08.png" alt="Average Racial and Ethnic Makeup by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 8 goes here. Save the image as <code>images/fig08.png</code>.<br>Idea: grouped bar chart of racial and ethnic makeup by community type</div>
   </div>
-  <figcaption><strong>Figure 8.</strong> <span>This grouped bar chart shows the average racial and ethnic makeup of counties in each community type. The groups shown do not add up to 100%, because other groups are not included.</span></figcaption>
+  <figcaption><strong>Figure 8.</strong> <span>This is a grouped bar chart summarizing the race and ethnic demographic compositions across the community types. This further reflects the distinct demographic distributions that help contextualize broader disparities.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig09.png"><img src="images/fig09.png" alt="Teen Birth Rate by Infant Risk Tier" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 9 goes here. Save the image as <code>images/fig09.png</code>.<br>Idea: boxplot of teen birth rate by infant risk tier</div>
   </div>
-  <figcaption><strong>Figure 9.</strong> <span>This boxplot shows teen birth rates for counties in each infant risk tier. Counties in higher-risk tiers have higher median teen birth rates and a wider spread.</span></figcaption>
+  <figcaption><strong>Figure 9.</strong> <span>This boxplot shows the escalation of teen birth rates across counties categorized by Infant Risk Tier. Higher risk tiers correspond with elevated median teen birth rates and a wider spread.</span></figcaption>
 </figure>
     <figure>
   <div class="figbox">
     <a href="images/fig10.png"><img src="images/fig10.png" alt="Counties by Community Type Before and After Cleaning" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
     <div class="ph">Figure 10 goes here. Save the image as <code>images/fig10.png</code>.<br>Idea: bar chart of community types before and after cleaning</div>
   </div>
-  <figcaption><strong>Figure 10.</strong> <span>This bar chart compares the number of counties in each community type before and after cleaning. Rural counties lost the largest share, largely because small counties often have missing or suppressed estimates.</span></figcaption>
+  <figcaption><strong>Figure 10.</strong> <span>This bar chart compares the county counts before and after data cleaning. This shows that there is a systemic loss of rural counties resulting from data suppression and incomplete reporting.</span></figcaption>
 </figure>
 
 </main>

@@ -48,24 +48,25 @@
   <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#bcd9f7" d="M0,70 C150,20 300,20 450,60 C600,100 750,30 900,40 C1050,50 1130,70 1200,55 L1200,120 L0,120 Z"/><path fill="#ffeeb5" d="M0,85 C120,55 260,50 400,80 C560,112 700,60 860,72 C1000,82 1100,96 1200,80 L1200,120 L0,120 Z"/><path fill="#c9ecdc" d="M0,100 C160,78 300,80 460,98 C620,114 760,84 920,92 C1050,98 1130,106 1200,96 L1200,120 L0,120 Z"/><path fill="#faf8fd" d="M0,111 C200,103 400,116 600,110 C800,104 1000,116 1200,108 L1200,120 L0,120 Z"/></svg>
 </div>
 <main id="main" class="wrap">
-
-    <h2>Overview</h2>
-    <p class="draft">Explain what clustering is, how it works, and what it will be used for with this topic. Cover both methods used: partitional clustering (k-means) and hierarchical clustering, including how each one works and how they differ. Note the distance metrics used (k-means uses Euclidean distance by default; hierarchical clustering here uses cosine distance). Discuss how clustering will be used for discovery with this data.</p>
+<h2>Overview</h2>
+    <p class="draft">Clustering is an unsupervised machine learning technique used to discover inherent groupings within unlabeled data based on feature similarity. In this project, it is used to identify distinct community profiles based on 35 structural socioeconomic and health variables without referencing birth outcomes. Two methods were applied: partitional clustering (K-Means), which iteratively assigns counties to discrete groups by minimizing Euclidean distance to a central centroid, and hierarchical agglomerative clustering, which builds a bottom-up tree mapping nested relationships using cosine distance.</p>
 
     <figure>
       <div class="figbox">
-        <a href="images/cluster_concept_1.png"><img src="images/cluster_concept_1.png" alt="Diagram explaining partitional vs. hierarchical clustering" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Image 1 of 2 for the Overview. Save as <code>images/cluster_concept_1.png</code>.<br>Idea: a general diagram illustrating partitional (k-means) vs. hierarchical clustering (not one of your result plots -- those belong in Results below).</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="Animation of K-means convergence" loading="lazy" style="max-width: 400px; border: 1px solid #ccc; border-radius: 8px;">
+        </a>
       </div>
-      <figcaption><strong>Figure 1.</strong> <span class="draft-inline">Write a caption explaining the diagram and cite its source.</span></figcaption>
+      <figcaption><strong>Figure 1.</strong> Partitional clustering (K-Means) iteratively assigns points to the nearest centroid using Euclidean distance to form discrete groups. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif" target="_blank">Wikimedia Commons</a>.</em></figcaption>
     </figure>
 
     <figure>
       <div class="figbox">
-        <a href="images/cluster_concept_2.png"><img src="images/cluster_concept_2.png" alt="Diagram explaining distance metrics used in clustering" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Image 2 of 2 for the Overview. Save as <code>images/cluster_concept_2.png</code>.<br>Idea: a diagram illustrating distance metrics (e.g. cosine similarity) or how a dendrogram is built.</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/a/ad/Hierarchical_clustering_simple_diagram.svg" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/a/ad/Hierarchical_clustering_simple_diagram.svg" alt="Hierarchical clustering dendrogram concept" loading="lazy" style="max-width: 400px;">
+        </a>
       </div>
-      <figcaption><strong>Figure 2.</strong> <span class="draft-inline">Write a caption explaining the diagram and cite its source.</span></figcaption>
+      <figcaption><strong>Figure 2.</strong> Hierarchical clustering builds a bottom-up tree (dendrogram) showing nested relationships across distance thresholds. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:Hierarchical_clustering_simple_diagram.svg" target="_blank">Wikimedia Commons</a>.</em></figcaption>
     </figure>
 
     <h2>Data</h2>

@@ -25,7 +25,7 @@
           <li><a class="tab" href="index.html">Introduction</a></li>
           <li><a class="tab" href="dataprep_eda.html">DataPrep_EDA</a></li>
           <li><a class="tab" href="clustering.html">Clustering</a></li>
-          <li><a class="tab" href="pca.html">PCA</a></li>
+          <li><a class="tab" href="pca.html" aria-current="page">PCA</a></li>
           <li><a class="tab" href="naivebayes.html">NaiveBayes</a></li>
           <li><a class="tab" href="dectrees.html">DecTrees</a></li>
           <li><a class="tab" href="regression.html">Regression</a></li>
@@ -50,20 +50,93 @@
 <main id="main" class="wrap">
 
     <h2>Overview</h2>
-    <p class="draft">Explain what principal component analysis is, how it works, and what it will be used for with this topic. Add an image.</p>
+    <p class="draft">Explain what PCA is, how it works, and what it will be used for with this topic. Cover eigenvalues and eigenvectors (what they represent here), dimensionality reduction (why it simplifies analysis and visualization), and the challenges posed by high-dimensional data (how many features this dataset has, and why that's hard to work with directly).</p>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_concept_1.png"><img src="images/pca_concept_1.png" alt="Diagram explaining PCA / dimensionality reduction" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Image 1 of 2 for the Overview. Save as <code>images/pca_concept_1.png</code>.<br>Idea: a general diagram illustrating what PCA does or what dimensionality reduction means (not one of your result plots -- those belong in Results below).</div>
+      </div>
+      <figcaption><strong>Figure 1.</strong> <span class="draft-inline">Write a caption explaining the diagram and cite its source.</span></figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_concept_2.png"><img src="images/pca_concept_2.png" alt="Diagram explaining eigenvalues and eigenvectors" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Image 2 of 2 for the Overview. Save as <code>images/pca_concept_2.png</code>.<br>Idea: a diagram illustrating eigenvalues/eigenvectors, or high-dimensional data being hard to visualize.</div>
+      </div>
+      <figcaption><strong>Figure 2.</strong> <span class="draft-inline">Write a caption explaining the diagram and cite its source.</span></figcaption>
+    </figure>
 
     <h2>Data</h2>
     <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_unlabeled_numeric.csv">clean_unlabeled_numeric.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
-    <p class="draft">Add a small image of the prepared data used for this method.</p>
+    <p class="draft">Explain what kind of data PCA needs (unlabeled numeric, same as clustering) and why -- note that low_birthweight_pct was set aside before running PCA and only brought back afterward to check against the components, rather than being treated as an input feature.</p>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_data_sample.png"><img src="images/pca_data_sample.png" alt="Sample of the prepared numeric data used for PCA" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/pca_data_sample.png</code>. You can reuse <code>images/clean_sample.png</code> from DataPrep_EDA, or make a new small image of just the scaled/numeric columns actually fed into PCA.</div>
+      </div>
+      <figcaption><strong>Figure 3.</strong> <span class="draft-inline">Write one sentence describing what this sample shows.</span></figcaption>
+    </figure>
 
     <h2>Code</h2>
-    <p class="draft">Link the code and note the language and core packages. Do not paste the code.</p>
+    <p>Code: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/pca.py">pca.py</a>. Language: Python. Core packages: pandas, numpy, scikit-learn (StandardScaler, PCA), matplotlib.</p>
+    <p class="draft">Optional: add one or two sentences noting anything notable about the approach (e.g. that the outcome variable was held out of the PCA input and compared afterward). Do not paste the code itself.</p>
 
     <h2>Results</h2>
-    <p class="draft">Describe, illustrate, and visualize the results, the parameters used, and what the results mean for the topic.</p>
+    <p class="draft">Describe, illustrate, and discuss the results below: how much variance each component explains, how many components it takes to capture most of the variance, which variables load most heavily on PC1 and PC2 (and what that suggests each component represents), and how the components relate to low birth weight.</p>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_scree.png"><img src="images/pca_scree.png" alt="Scree plot of variance explained by each principal component" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/pca_scree.png</code> (already generated by pca.py).</div>
+      </div>
+      <figcaption><strong>Figure 4.</strong> <span class="draft-inline">Describe the eigenvalues/variance explained per component shown here, and what the shape of the curve suggests.</span></figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_cumulative.png"><img src="images/pca_cumulative.png" alt="Cumulative variance explained as more components are added" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/pca_cumulative.png</code> (already generated by pca.py).</div>
+      </div>
+      <figcaption><strong>Figure 5.</strong> <span class="draft-inline">State how many components it takes to reach 80% and 90% of the variance, and what that means for simplifying this dataset.</span></figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_scores.png"><img src="images/pca_scores.png" alt="Counties projected onto the first two principal components" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/pca_scores.png</code> (already generated by pca.py).</div>
+      </div>
+      <figcaption><strong>Figure 6.</strong> <span class="draft-inline">Describe what this plot shows: each county positioned by its PC1/PC2 scores.</span></figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_loadings.png"><img src="images/pca_loadings.png" alt="Loadings plot showing which variables drive PC1 and PC2" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/pca_loadings.png</code> (already generated by pca.py).</div>
+      </div>
+      <figcaption><strong>Figure 7.</strong> <span class="draft-inline">Name the variables with the strongest loadings on PC1 and PC2, and what each component seems to represent (e.g. a socioeconomic axis vs. a population/age axis).</span></figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_loadings_table.png"><img src="images/pca_loadings_table.png" alt="Table of top principal component loadings" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/pca_loadings_table.png</code> (already generated by pca.py).</div>
+      </div>
+      <figcaption><strong>Figure 8.</strong> <span class="draft-inline">One sentence pointing to this table as a summary of the loadings discussed above.</span></figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/pca_outcome_overlay.png"><img src="images/pca_outcome_overlay.png" alt="Counties on PC1/PC2 colored by low birth weight" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/pca_outcome_overlay.png</code> (already generated by pca.py).</div>
+      </div>
+      <figcaption><strong>Figure 9.</strong> <span class="draft-inline">Describe the pattern (or lack of one) in this color gradient, and report the PC1/PC2 correlations with low birth weight.</span></figcaption>
+    </figure>
 
     <h2>Conclusions</h2>
-    <p class="draft">Explain what was learned that applies to the topic.</p>
+    <p class="draft">Explain what was learned that applies to the topic: what the strongest component represents, how it relates to infant health, and what that suggests about which community conditions matter most.</p>
 
 </main>
 <footer class="foot">

@@ -49,25 +49,25 @@
 </div>
 <main id="main" class="wrap">
 
-   <h2>Overview</h2>
-    <p class="draft">Principal Component Analysis (PCA) is an unsupervised dimensionality reduction technique that mathematically transforms a high-dimensional dataset into a smaller set of uncorrelated variables (principal components) while preserving as much variance as possible. Working with 35 distinct socioeconomic and health indicators creates challenges for both visualization and analysis. PCA addresses this by calculating eigenvectors (the directions of maximum variance) and projecting the complex county-level dataset onto a simplified 2D coordinate space, allowing us to uncover the primary drivers of community distress.</p>
+<h2>Overview</h2>
+    <p>Principal Component Analysis (PCA) is an unsupervised dimensionality reduction technique that mathematically transforms a high-dimensional dataset into a smaller set of uncorrelated variables (principal components) while preserving as much variance as possible. Working with 35 distinct socioeconomic and health indicators creates challenges for both visualization and analysis. PCA addresses this by calculating eigenvectors (the directions of maximum variance) and projecting the complex county-level dataset onto a simplified 2D coordinate space, allowing us to uncover the primary drivers of community distress.</p>
 
     <figure>
-      <div class="figbox">
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
         <a href="https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg" alt="PCA Gaussian Scatter Plot" loading="lazy" style="max-width: 400px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg" alt="PCA Gaussian Scatter Plot" loading="lazy" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
         </a>
       </div>
       <figcaption><strong>Figure 1.</strong> PCA creates new orthogonal axes (Principal Components). PC1 always aligns with the direction of maximum variance in the data, while PC2 captures the highest remaining orthogonal variance. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:GaussianScatterPCA.svg" target="_blank">Wikimedia Commons</a>.</em></figcaption>
     </figure>
 
     <figure>
-      <div class="figbox">
-        <a href="https://commons.wikimedia.org/wiki/File:PCA_Projection_Illustration.gif" target="_blank">
-          <img src="https://commons.wikimedia.org/wiki/Special:FilePath/PCA_Projection_Illustration.gif" alt="PCA Dimensionality Reduction Animation" loading="lazy" style="width: 100%; height: auto; display: block; border: 1px solid #ccc; border-radius: 8px;">
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <a href="images/pca_dimensionality_reduction.png" target="_blank">
+          <img src="images/pca_dimensionality_reduction.png" alt="Before and After: PCA Dimensionality Reduction 3D to 2D projection" loading="lazy" style="width: 100%; max-width: 550px; height: auto; display: block; margin: 0 auto;">
         </a>
       </div>
-      <figcaption><strong>Figure 2.</strong> Conceptual animation of dimensionality reduction. High-dimensional data is mathematically projected onto a 2D plane defined by the principal components to simplify analysis and visualization. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:PCA_Projection_Illustration.gif" target="_blank">Wikimedia Commons</a>.</em></figcaption>
+      <figcaption><strong>Figure 2.</strong> Conceptual visual comparison of dimensionality reduction. High-dimensional data points in 3-dimensional space (left) are mathematically projected onto a 2-dimensional plane (right) defined by the first two principal components, simplifying visualization while preserving the distinct cluster formations. <em>Source: Local diagram created for this analysis.</em></figcaption>
     </figure>
 
     <h2>Data</h2>

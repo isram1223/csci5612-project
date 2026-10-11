@@ -49,23 +49,25 @@
 </div>
 <main id="main" class="wrap">
 
-    <h2>Overview</h2>
-    <p class="draft">Explain what PCA is, how it works, and what it will be used for with this topic. Cover eigenvalues and eigenvectors (what they represent here), dimensionality reduction (why it simplifies analysis and visualization), and the challenges posed by high-dimensional data (how many features this dataset has, and why that's hard to work with directly).</p>
+   <h2>Overview</h2>
+    <p class="draft">Principal Component Analysis (PCA) is an unsupervised dimensionality reduction technique that mathematically transforms a high-dimensional dataset into a smaller set of uncorrelated variables (principal components) while preserving as much variance as possible. Working with 35 distinct socioeconomic and health indicators creates challenges for both visualization and analysis. PCA addresses this by calculating eigenvectors (the directions of maximum variance) and projecting the complex county-level dataset onto a simplified 2D coordinate space, allowing us to uncover the primary drivers of community distress.</p>
 
     <figure>
       <div class="figbox">
-        <a href="images/pca_concept_1.png"><img src="images/pca_concept_1.png" alt="Diagram explaining PCA / dimensionality reduction" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Image 1 of 2 for the Overview. Save as <code>images/pca_concept_1.png</code>.<br>Idea: a general diagram illustrating what PCA does or what dimensionality reduction means (not one of your result plots -- those belong in Results below).</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/GaussianScatterPCA.svg" alt="PCA Gaussian Scatter Plot" loading="lazy" style="max-width: 400px;">
+        </a>
       </div>
-      <figcaption><strong>Figure 1.</strong> <span class="draft-inline">Write a caption explaining the diagram and cite its source.</span></figcaption>
+      <figcaption><strong>Figure 1.</strong> PCA creates new orthogonal axes (Principal Components). PC1 always aligns with the direction of maximum variance in the data, while PC2 captures the highest remaining orthogonal variance. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:GaussianScatterPCA.svg" target="_blank">Wikimedia Commons</a>.</em></figcaption>
     </figure>
 
     <figure>
       <div class="figbox">
-        <a href="images/pca_concept_2.png"><img src="images/pca_concept_2.png" alt="Diagram explaining eigenvalues and eigenvectors" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Image 2 of 2 for the Overview. Save as <code>images/pca_concept_2.png</code>.<br>Idea: a diagram illustrating eigenvalues/eigenvectors, or high-dimensional data being hard to visualize.</div>
+        <a href="https://upload.wikimedia.org/wikipedia/commons/f/f5/PCA_Principal_Component_Analysis.gif" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/PCA_Principal_Component_Analysis.gif" alt="PCA Dimensionality Reduction Animation" loading="lazy" style="max-width: 400px; border: 1px solid #ccc; border-radius: 8px;">
+        </a>
       </div>
-      <figcaption><strong>Figure 2.</strong> <span class="draft-inline">Write a caption explaining the diagram and cite its source.</span></figcaption>
+      <figcaption><strong>Figure 2.</strong> Conceptual animation of dimensionality reduction. High-dimensional data is mathematically projected onto a 2D plane defined by the principal components to simplify analysis and visualization. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:PCA_Principal_Component_Analysis.gif" target="_blank">Wikimedia Commons</a>.</em></figcaption>
     </figure>
 
     <h2>Data</h2>

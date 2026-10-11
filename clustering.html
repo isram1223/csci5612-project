@@ -48,7 +48,10 @@
   <svg class="hills" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true"><path fill="#bcd9f7" d="M0,70 C150,20 300,20 450,60 C600,100 750,30 900,40 C1050,50 1130,70 1200,55 L1200,120 L0,120 Z"/><path fill="#ffeeb5" d="M0,85 C120,55 260,50 400,80 C560,112 700,60 860,72 C1000,82 1100,96 1200,80 L1200,120 L0,120 Z"/><path fill="#c9ecdc" d="M0,100 C160,78 300,80 460,98 C620,114 760,84 920,92 C1050,98 1130,106 1200,96 L1200,120 L0,120 Z"/><path fill="#faf8fd" d="M0,111 C200,103 400,116 600,110 C800,104 1000,116 1200,108 L1200,120 L0,120 Z"/></svg>
 </div>
 <main id="main" class="wrap">
-<figure>
+<h2>Overview</h2>
+    <p>Clustering is an unsupervised machine learning technique used to discover inherent groupings within unlabeled data based on feature similarity. In this project, it is used to identify distinct community profiles based on 35 structural socioeconomic and health variables without referencing birth outcomes. Two methods were applied: partitional clustering (K-Means), which iteratively assigns counties to discrete groups by minimizing Euclidean distance to a central centroid, and hierarchical agglomerative clustering, which builds a bottom-up tree mapping nested relationships using cosine distance.</p>
+
+    <figure>
       <div class="figbox">
         <a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" target="_blank">
           <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="Animation of K-means convergence" loading="lazy" style="width: 100%; height: auto; display: block; border-radius: 8px;">
@@ -65,6 +68,8 @@
       </div>
       <figcaption><strong>Figure 2.</strong> Hierarchical clustering builds a bottom-up tree (dendrogram) showing nested relationships across distance thresholds. <em>Source: <a href="https://scikit-learn.org/stable/modules/clustering.html" target="_blank">Scikit-Learn Official Documentation</a>.</em></figcaption>
     </figure>
+
+    <h2>Data</h2>
     <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_unlabeled_numeric.csv">clean_unlabeled_numeric.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
     <p class="draft">Explain that clustering requires only unlabeled numeric data, and that the data was standardized (scaled) before clustering so that columns on different scales (e.g. population in the thousands vs. a percent column) don't dominate the distance calculations. Note that low_birthweight_pct was set aside before clustering and only brought back afterward to see whether the resulting clusters differ on it.</p>
 

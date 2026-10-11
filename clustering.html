@@ -52,18 +52,20 @@
     <p>Clustering is an unsupervised machine learning technique used to discover inherent groupings within unlabeled data based on feature similarity. In this project, it is used to identify distinct community profiles based on 35 structural socioeconomic and health variables without referencing birth outcomes. Two methods were applied: partitional clustering (K-Means), which iteratively assigns counties to discrete groups by minimizing Euclidean distance to a central centroid, and hierarchical agglomerative clustering, which builds a bottom-up tree mapping nested relationships using cosine distance.</p>
 
     <figure>
-      <div class="figbox">
+      <!-- We added style overrides to .figbox to prevent vertical trimming -->
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
         <a href="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="Animation of K-means convergence" loading="lazy" style="width: 100%; height: 350px; object-fit: contain; display: block; border-radius: 8px;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/e/ea/K-means_convergence.gif" alt="Animation of K-means convergence" loading="lazy" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
         </a>
       </div>
       <figcaption><strong>Figure 1.</strong> Partitional clustering (K-Means) iteratively assigns points to the nearest centroid using Euclidean distance to form discrete groups. <em>Source: <a href="https://commons.wikimedia.org/wiki/File:K-means_convergence.gif" target="_blank">Wikimedia Commons</a>.</em></figcaption>
     </figure>
 
     <figure>
-      <div class="figbox">
+      <!-- We applied the same crop-proof overrides to Figure 2 -->
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
         <a href="https://scikit-learn.org/stable/_images/sphx_glr_plot_agglomerative_dendrogram_001.png" target="_blank">
-          <img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_agglomerative_dendrogram_001.png" alt="Hierarchical clustering dendrogram concept" loading="lazy" style="width: 100%; height: 350px; object-fit: contain; display: block; border-radius: 8px;">
+          <img src="https://scikit-learn.org/stable/_images/sphx_glr_plot_agglomerative_dendrogram_001.png" alt="Hierarchical clustering dendrogram concept" loading="lazy" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
         </a>
       </div>
       <figcaption><strong>Figure 2.</strong> Hierarchical clustering builds a bottom-up tree (dendrogram) showing nested relationships across distance thresholds. <em>Source: <a href="https://scikit-learn.org/stable/modules/clustering.html" target="_blank">Scikit-Learn Official Documentation</a>.</em></figcaption>

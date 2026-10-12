@@ -93,7 +93,7 @@
     <p>Code: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/pca.py">pca.py</a>. Language: Python. Core packages: pandas, numpy, scikit-learn (StandardScaler, PCA), matplotlib.</p>
     <p>The PCA successfully reduced the 35-dimensional dataset into a much simpler space. PC1 alone explains about 32% of the variance, while PC2 explains an additional 15%. Together PC1 and PC2 explain about 47% of all the structural variation across U.S. counties. PC1 is heavily driven by socioeconomic and behavioral distress, specifically high inactivity and child poverty. PC2 is driven by demographics and housing, specifically median age and renter percentage. When these counties are plotted in 2D space, they form one single continuous cloud. Once this is overlaid with low-birth-weight percentages, there is a stark gradient that appears. It seems that counties with the highest rates of low birth weight are heavily concentrated on the positive side of PC1. </p>
     <h2>Results</h2>
-    <p class="draft">Describe, illustrate, and discuss the results below: how much variance each component explains, how many components it takes to capture most of the variance, which variables load most heavily on PC1 and PC2 (and what that suggests each component represents), and how the components relate to low birth weight.</p>
+    <p class="draft">Describe, illustrate, and discuss the results below: how much variance each component explains, how many components it takes to capture most of the variance, which variables load most heavily on PC1 and PC2 (and what that suggests each component represents), and how the components relate to low birth weight. Furthermore, it takes exactly 17 components to capture 90% of the cumulative variance, this cuts the dimensions of the dataset in half without losing critical information.</p>
 
     <figure>
       <div class="figbox">
@@ -144,7 +144,7 @@
     </figure>
 
     <h2>Conclusions</h2>
-    <p>These PCA results demonstrate that the complexity of 35 different community variables can be summarized by a primary socioeconomic component and a secondary demographic component. Crucial findings from this unsupervised learning show that without the knowledge of birth weight, the highest rates of low birth weight align with high scores on PC1. This suggests that structural socioeconomic distress is a driving force behind negative infant health outcomes, outweighing the impact of age and demographic makeup. </p>
+    <p>These PCA results demonstrate that the complexity of 35 different community variables can be summarized by a primary socioeconomic component and a secondary demographic component. Crucial findings from this unsupervised learning show that without the knowledge of birth weight, the highest rates of low birth weight align with high scores on PC1. This suggests that structural socioeconomic distress is a driving force behind negative infant health outcomes, outweighing the impact of age and demographic makeup. This visual gradient is confirmed by a strong positive correlation (0.57) between PC1 and the low birth weight percentages.</p>
 </main>
 <footer class="foot">
   <div class="wrap">

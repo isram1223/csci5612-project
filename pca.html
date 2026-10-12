@@ -78,9 +78,10 @@
 
     <h2>Data</h2>
     <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_unlabeled_numeric.csv">clean_unlabeled_numeric.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
-    <p class="draft">Explain what kind of data PCA needs (unlabeled numeric, same as clustering) and why -- note that low_birthweight_pct was set aside before running PCA and only brought back afterward to check against the components, rather than being treated as an input feature.</p>
-
-    <figure>
+    <p>
+    </p> PCA relies on calculating variances and geometric distances, therefore it requires continuous, unlabeled numeric data. For this reason, the 35 structural features were standardized, and the outcome variable (low birth weight) was removed before the algorithm was run. Because PCA is an unsupervised technique meant to discover organic structural patterns, the birth weight data was held out entirely.
+    </p>
+  <figure>
       <div class="figbox">
         <a href="images/pca_data_sample.png"><img src="images/pca_data_sample.png" alt="Sample of the prepared numeric data used for PCA" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Save as <code>images/pca_data_sample.png</code>. You can reuse <code>images/clean_sample.png</code> from DataPrep_EDA, or make a new small image of just the scaled/numeric columns actually fed into PCA.</div>
@@ -90,8 +91,7 @@
 
     <h2>Code</h2>
     <p>Code: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/pca.py">pca.py</a>. Language: Python. Core packages: pandas, numpy, scikit-learn (StandardScaler, PCA), matplotlib.</p>
-    <p class="draft">Optional: add one or two sentences noting anything notable about the approach (e.g. that the outcome variable was held out of the PCA input and compared afterward). Do not paste the code itself.</p>
-
+    <p>The PCA successfully reduced the 35-dimensional dataset into a much simpler space. PC1 alone explains about 32% of the variance, while PC2 explains an additional 15%. Together PC1 and PC2 explain about 47% of all the structural variation across U.S. counties. PC1 is heavily driven by socioeconomic and behavioral distress, specifically high inactivity and child poverty. PC2 is driven by demographics and housing, specifically median age and renter percentage. When these counties are plotted in 2D space, they form one single continuous cloud. Once this is overlaid with low-birth-weight percentages, there is a stark gradient that appears. It seems that counties with the highest rates of low birth weight are heavily concentrated on the positive side of PC1. </p>
     <h2>Results</h2>
     <p class="draft">Describe, illustrate, and discuss the results below: how much variance each component explains, how many components it takes to capture most of the variance, which variables load most heavily on PC1 and PC2 (and what that suggests each component represents), and how the components relate to low birth weight.</p>
 
@@ -144,8 +144,7 @@
     </figure>
 
     <h2>Conclusions</h2>
-    <p class="draft">Explain what was learned that applies to the topic: what the strongest component represents, how it relates to infant health, and what that suggests about which community conditions matter most.</p>
-
+    <p>These PCA results demonstrate that the complexity of 35 different community variables can be summarized by a primary socioeconomic component and a secondary demographic component. Crucial findings from this unsupervised learning show that without the knowledge of birth weight, the highest rates of low birth weight align with high scores on PC1. This suggests that structural socioeconomic distress is a driving force behind negative infant health outcomes, outweighing the impact of age and demographic makeup. </p>
 </main>
 <footer class="foot">
   <div class="wrap">

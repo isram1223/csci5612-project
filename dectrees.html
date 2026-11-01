@@ -49,37 +49,79 @@
 <main id="main" class="wrap">
 
     <h2>Overview</h2>
-    <p class="draft">[WRITE HERE: Explain Decision Trees. You MUST include a small math example comparing Gini vs Entropy and Information Gain. Also explain why it is possible to create an infinite number of trees.]</p>
+    <p class="draft">Explain what decision trees are, how Gini, Entropy, and Information Gain work (with a math example), and why infinite trees are possible.</p>
     
-    <img src="images/YOUR_EXTERNAL_DT_IMAGE_1.png" alt="Decision Tree Illustration 1" style="max-width: 600px; width: 100%; margin-bottom: 20px;">
-    <img src="images/YOUR_EXTERNAL_DT_IMAGE_2.png" alt="Decision Tree Illustration 2" style="max-width: 600px; width: 100%;">
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/YOUR_EXTERNAL_DT_IMAGE_1.png" alt="Decision Tree Illustration" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 1:</strong> Conceptual diagram showing decision tree hierarchical splits.</figcaption>
+    </figure>
 
-    <h2>Data Prep</h2>
-    <p>Prepared full dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>.</p>
-    <p>Training Set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_train.csv">dt_train.csv</a> | Testing Set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_test.csv">dt_test.csv</a></p>
-    
-    <p class="draft">[WRITE HERE: Explain what labeled data is, how you created the Train/Test sets (a 75/25 split), and explain why the training and testing sets MUST be disjoint (so the model is tested on unseen data).]</p>
+    <h2>Data</h2>
+    <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>. Training set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_train.csv">dt_train.csv</a>. Testing set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_test.csv">dt_test.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
+    <p class="draft">Explain how the train/test sets were created and why they must be disjoint.</p>
 
-    <img src="images/dt_data_split.png" alt="Table showing the 75/25 data split" style="max-width: 600px; width: 100%; margin-bottom: 20px;">
-    <img src="images/dt_train_sample.png" alt="Sample of the Training Set" style="max-width: 800px; width: 100%; margin-bottom: 20px;">
-    <img src="images/dt_test_sample.png" alt="Sample of the Testing Set" style="max-width: 800px; width: 100%;">
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/dt_data_split.png" alt="Table showing the 75/25 data split" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 2:</strong> Train and test dataset partition breakdown for Decision Tree modeling.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/dt_train_sample.png" alt="Sample of the Training Set" loading="lazy" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 3:</strong> Random sample rows from the Decision Tree training dataset.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/dt_test_sample.png" alt="Sample of the Testing Set" loading="lazy" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 4:</strong> Random sample rows from the Decision Tree testing dataset.</figcaption>
+    </figure>
 
     <h2>Code</h2>
-    <p>The code for this section was written in <b>Python</b> utilizing <code>pandas</code> for data manipulation and <code>scikit-learn</code> (sklearn) for machine learning model implementation. The dataset features are numeric, fulfilling the requirement for Python's scikit-learn Decision Tree implementation.</p>
     <p>View the code here: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/decision_trees.py">decision_trees.py</a></p>
+    <p class="draft">Note the language (Python) and core packages (pandas, scikit-learn).</p>
 
     <h2>Results</h2>
-    <p class="draft">[WRITE HERE: Describe the results. Mention that the baseline guess accuracy was 35.47%, and the Depth 5 Decision Tree achieved an accuracy of 61.64%. Discuss how the tree makes decisions based on variables like child poverty and teen birth rates.]</p>
-    
-    <img src="images/dt_confusion_matrix.png" alt="Decision Tree Confusion Matrix" style="max-width: 600px; width: 100%; margin-bottom: 40px;">
-    
+    <p class="draft">Describe the results (including accuracy of 61.64% vs 35.47% baseline) and what the confusion matrix and visual trees mean.</p>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/dt_confusion_matrix.png" alt="Decision Tree Confusion Matrix" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 5:</strong> Confusion matrix showing the performance of the Decision Tree model.</figcaption>
+    </figure>
+
     <h3>Generated Decision Trees</h3>
-    <img src="images/dt_tree_2.png" alt="Decision Tree with Max Depth 2" style="max-width: 100%; margin-bottom: 20px;">
-    <img src="images/dt_tree_3.png" alt="Decision Tree with Max Depth 3" style="max-width: 100%; margin-bottom: 20px;">
-    <img src="images/dt_tree_5.png" alt="Decision Tree with Max Depth 5" style="max-width: 100%;">
+    
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/dt_tree_2.png" alt="Decision Tree with Max Depth 2" loading="lazy" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 6:</strong> Decision Tree visualization restricted to maximum depth = 2.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/dt_tree_3.png" alt="Decision Tree with Max Depth 3" loading="lazy" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 7:</strong> Decision Tree visualization restricted to maximum depth = 3.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/dt_tree_5.png" alt="Decision Tree with Max Depth 5" loading="lazy" style="width: 100%; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 8:</strong> Decision Tree visualization restricted to maximum depth = 5.</figcaption>
+    </figure>
 
     <h2>Conclusions</h2>
-    <p class="draft">[WRITE HERE: Explain what these splits mean for maternal and infant health in US counties. What did the model learn?]</p>
+    <p class="draft">Explain what was learned regarding community conditions and infant health.</p>
 
 </main>
 <footer class="foot">

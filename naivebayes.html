@@ -49,37 +49,58 @@
 <main id="main" class="wrap">
 
     <h2>Overview</h2>
-    <p class="draft">[WRITE HERE: Describe what Naive Bayes is and what it is used for. You MUST explicitly define and describe BOTH Multinomial NB and Bernoulli NB here.]</p>
-
-  <figure>
-  <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
-    <a href="https://upload.wikimedia.org/wikipedia/commons/b/b4/Naive_Bayes_Classifier.gif" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Naive_Bayes_Classifier.gif" alt="Animation of Naive Bayes classifier" loading="lazy" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
-    </a>
-  </div>
-</figure>
-
-    <h2>Data Prep</h2>
-    <p>Prepared full dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>.</p>
-    <p>Training Set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/nb_train.csv">nb_train.csv</a> | Testing Set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/nb_test.csv">nb_test.csv</a></p>
+    <p class="draft">Explain what Naive Bayes is, how it works (defining both Multinomial NB and Bernoulli NB), and what it will be used for with this topic.</p>
     
-    <p class="draft">[WRITE HERE: Explain what labeled data is, how you created the Train/Test sets (a 75/25 split), and explain why the training and testing sets MUST be disjoint (so the model is tested on unseen data).]</p>
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <a href="https://upload.wikimedia.org/wikipedia/commons/b/b4/Naive_Bayes_Classifier.gif" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/b/b4/Naive_Bayes_Classifier.gif" alt="Animation of Naive Bayes classifier" loading="lazy" style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto;">
+        </a>
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 1:</strong> Animation illustrating Naïve Bayes classification boundaries across feature space.</figcaption>
+    </figure>
 
-    <img src="images/nb_data_split.png" alt="Table showing the 75/25 data split" style="max-width: 600px; width: 100%; margin-bottom: 20px;">
-    <img src="images/nb_train_sample.png" alt="Sample of the Training Set" style="max-width: 800px; width: 100%; margin-bottom: 20px;">
-    <img src="images/nb_test_sample.png" alt="Sample of the Testing Set" style="max-width: 800px; width: 100%;">
+    <h2>Data</h2>
+    <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>. Training set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/nb_train.csv">nb_train.csv</a>. Testing set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/nb_test.csv">nb_test.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
+    <p class="draft">Explain how the train/test sets were created and why they must be disjoint.</p>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/nb_data_split.png" alt="Table showing the 75/25 data split" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 2:</strong> Train and test dataset partition breakdown for Naïve Bayes modeling.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/nb_train_sample.png" alt="Sample of the Training Set" loading="lazy" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 3:</strong> Random sample rows from the Naïve Bayes training dataset.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/nb_test_sample.png" alt="Sample of the Testing Set" loading="lazy" style="width: 100%; max-width: 800px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 4:</strong> Random sample rows from the Naïve Bayes testing dataset.</figcaption>
+    </figure>
 
     <h2>Code</h2>
-    <p>The code for this section was written in <b>Python</b> utilizing <code>pandas</code> for data manipulation and <code>scikit-learn</code> (sklearn) for machine learning model implementation. The dataset features are numeric, fulfilling the requirement for Python's scikit-learn Multinomial Naive Bayes implementation.</p>
     <p>View the code here: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/naive_bayes.py">naive_bayes.py</a></p>
+    <p class="draft">Note the language (Python) and core packages (pandas, scikit-learn).</p>
 
     <h2>Results</h2>
-    <p class="draft">[WRITE HERE: Describe the results. Mention that the baseline guess accuracy was 35.47%, and your Multinomial Naive Bayes model achieved an accuracy of 59.23%. Discuss the confusion matrix below (e.g., how well it predicted High Risk vs Low Risk).]</p>
-    
-    <img src="images/nb_confusion_matrix.png" alt="Multinomial Naive Bayes Confusion Matrix" style="max-width: 600px; width: 100%;">
+    <p class="draft">Describe the results (including accuracy of 59.23% vs 35.47% baseline) and what the confusion matrix means.</p>
+
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/nb_confusion_matrix.png" alt="Multinomial Naive Bayes Confusion Matrix" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 5:</strong> Confusion matrix showing the performance of the Multinomial Naïve Bayes model.</figcaption>
+    </figure>
 
     <h2>Conclusions</h2>
-    <p class="draft">[WRITE HERE: Explain what these results mean for maternal and infant health in US counties. What did the model learn?]</p>
+    <p class="draft">Explain what was learned regarding community conditions and infant health.</p>
 
 </main>
 <footer class="foot">

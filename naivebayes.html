@@ -15,7 +15,7 @@
   <div class="wrap">
     <a class="brand" href="index.html">
       <svg class="logo" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 35 C3 23 2 10 10.5 6.5 C15.5 4.5 19 6.5 20 10.5 C21 6.5 24.5 4.5 29.5 6.5 C38 10 37 23 20 35 Z" fill="#a9cdf5"/><path d="M20 28.5 C13.5 24 13 19 16 17.5 C18 16.5 19.5 17.5 20 19.2 C20.5 17.5 22 16.5 24 17.5 C27 19 26.5 24 20 28.5 Z" fill="#ffe08a"/><path d="M33 3l1 2.3 2.3 1-2.3 1L33 9.6l-1-2.3-2.3-1 2.3-1z" fill="#b9a8e8"/></svg>
-      <span class="brand-text"><span class="site-title">Community Conditions and Infant Health</span><span class="site-sub">Mental Health, Access to Care, and Maternal and Infant Health Across US Counties</span></span>
+      <span class="brand-text"><span class="site-title">Community Conditions and Infant Health</span><span class="site-sub">Mental Health, Community Conditions, and Infant Health Across US Counties</span></span>
     </a>
   </div>
 </header>
@@ -26,12 +26,11 @@
           <li><a class="tab" href="dataprep_eda.html">DataPrep_EDA</a></li>
           <li><a class="tab" href="clustering.html">Clustering</a></li>
           <li><a class="tab" href="pca.html">PCA</a></li>
-          <li><a class="tab" href="naivebayes.html">NaiveBayes</a></li>
+          <li><a class="tab" href="naivebayes.html" aria-current="page">NaiveBayes</a></li>
           <li><a class="tab" href="dectrees.html">DecTrees</a></li>
+          <li><a class="tab" href="svms.html">SVMs</a></li>
           <li><a class="tab" href="regression.html">Regression</a></li>
-          <li><a class="tab" href="adaboost.html">AdaBoost</a></li>
-          <li><a class="tab" href="gradientboosting.html">GradientBoosting</a></li>
-          <li><a class="tab" href="xgboost.html">XGBoost</a></li>
+          <li><a class="tab" href="nn.html">NN</a></li>
           <li><a class="tab" href="conclusions.html">Conclusions</a></li>
           <li><a class="tab" href="about.html">About Me</a></li>
     </ul>
@@ -50,17 +49,31 @@
 <main id="main" class="wrap">
 
     <h2>Overview</h2>
-    <p class="draft">Explain what Naive Bayes is, how it works, and what it will be used for with this topic. Add an image.</p>
+    <p class="draft">[WRITE HERE: Describe what Naive Bayes is and what it is used for. You MUST explicitly define and describe BOTH Multinomial NB and Bernoulli NB here.]</p>
+    
+    <img src="images/YOUR_EXTERNAL_NB_IMAGE.png" alt="Illustration of Naive Bayes" style="max-width: 600px; width: 100%;">
 
-    <h2>Data</h2>
-    <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>, <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_community_type.csv">clean_labeled_community_type.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
-    <p class="draft">Add a small image of the prepared data used for this method.</p>
+    <h2>Data Prep</h2>
+    <p>Prepared full dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>.</p>
+    <p>Training Set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/nb_train.csv">nb_train.csv</a> | Testing Set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/nb_test.csv">nb_test.csv</a></p>
+    
+    <p class="draft">[WRITE HERE: Explain what labeled data is, how you created the Train/Test sets (a 75/25 split), and explain why the training and testing sets MUST be disjoint (so the model is tested on unseen data).]</p>
+
+    <img src="images/nb_data_split.png" alt="Table showing the 75/25 data split" style="max-width: 600px; width: 100%; margin-bottom: 20px;">
+    <img src="images/nb_train_sample.png" alt="Sample of the Training Set" style="max-width: 800px; width: 100%; margin-bottom: 20px;">
+    <img src="images/nb_test_sample.png" alt="Sample of the Testing Set" style="max-width: 800px; width: 100%;">
 
     <h2>Code</h2>
-    <p class="draft">Link the code and note the language and core packages. Do not paste the code.</p>
+    <p>The code for this section was written in <b>Python</b> utilizing <code>pandas</code> for data manipulation and <code>scikit-learn</code> (sklearn) for machine learning model implementation. The dataset features are numeric, fulfilling the requirement for Python's scikit-learn Multinomial Naive Bayes implementation.</p>
+    <p>View the code here: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/naive_bayes.py">naive_bayes.py</a></p>
 
     <h2>Results</h2>
-    <p class="draft">Describe, illustrate, and visualize the results, the parameters used, and what the results mean for the topic.</p>
+    <p class="draft">[WRITE HERE: Describe the results. Mention that the baseline guess accuracy was 35.47%, and your Multinomial Naive Bayes model achieved an accuracy of 59.23%. Discuss the confusion matrix below (e.g., how well it predicted High Risk vs Low Risk).]</p>
+    
+    <img src="images/nb_confusion_matrix.png" alt="Multinomial Naive Bayes Confusion Matrix" style="max-width: 600px; width: 100%;">
+
+    <h2>Conclusions</h2>
+    <p class="draft">[WRITE HERE: Explain what these results mean for maternal and infant health in US counties. What did the model learn?]</p>
 
 </main>
 <footer class="foot">

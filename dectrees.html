@@ -40,7 +40,7 @@
   <div class="wrap band-inner">
     <div class="band-text">
       <h1>DecTrees</h1>
-      <p class="lede">Added in Project Part 3.</p>
+      <p class="lede">Hierarchical rule-based classification and feature splitting.</p>
     </div>
     <svg class="art" viewBox="0 0 150 110" aria-hidden="true"><g transform="translate(30 12)"><path d="M40 70 C6 46 4 20 21 13 C31 9 38 13 40 21 C42 13 49 9 59 13 C76 20 74 46 40 70 Z" fill="#a9cdf5"/><path d="M40 57 C27 48 26 38 32 35 C36 33 39 35 40 38.5 C41 35 44 33 48 35 C54 38 53 48 40 57 Z" fill="#ffe08a"/></g><g fill="#ffffff"><path d="M120 16l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/><path d="M22 28l1.6 3.8 3.8 1.6-3.8 1.6L22 38.8l-1.6-3.8-3.8-1.6 3.8-1.6z"/><path d="M130 74l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z"/></g><circle cx="108" cy="92" r="2.4" fill="#ffffff"/><circle cx="14" cy="66" r="2" fill="#ffffff"/></svg>
   </div>
@@ -51,22 +51,22 @@
     <h2>Overview</h2>
     <p class="draft">Explain what decision trees are, how Gini, Entropy, and Information Gain work (with a math example), and why infinite trees are possible.</p>
 
-<figure>
-  <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
-    <img src="images/Decision-Tree.avif" alt="General structure of a decision tree showing root, internal, and leaf nodes" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-  </div>
-  <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 1:</strong> Hierarchical structure of a decision tree consisting of a root node, internal decision nodes, and terminal leaf nodes[cite: 4, 6].</figcaption>
-</figure>
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/Decision-Tree.avif" alt="General structure of a decision tree showing root, internal, and leaf nodes" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 1:</strong> Hierarchical structure of a decision tree consisting of a root node, internal decision nodes, and terminal leaf nodes[cite: 4, 6].</figcaption>
+    </figure>
 
-<figure>
-  <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
-    <img src="images/Dec-Tree.png" alt="Practical example of a decision tree breaking down conditions for surfing" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
-  </div>
-  <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 2:</strong> Practical flowchart example illustrating sequential attribute splitting and decision paths to evaluate outcomes[cite: 5, 7].</figcaption>
-</figure>
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <img src="images/Dec-Tree.png" alt="Practical example of a decision tree breaking down conditions for surfing" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+      </div>
+      <figcaption style="text-align: center; margin-top: 8px; font-size: 0.9em; color: #555;"><strong>Figure 2:</strong> Practical flowchart example illustrating sequential attribute splitting and decision paths to evaluate outcomes[cite: 5, 7].</figcaption>
+    </figure>
 
     <h2>Data</h2>
-    <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>, <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_community_type.csv">clean_labeled_community_type.csv</a>. Training set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_train.csv">dt_train.csv</a>. Testing set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_test.csv">dt_test.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
+    <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>, <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_community_type.csv">clean_labeled_community_type.csv</a>. Training set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_train.csv">dt_train.csv</a>. Testing set: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/dt_test.csv">dt_test.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>[cite: 12].</p>
     <p class="draft">Explain how the train/test sets were created and why they must be disjoint.</p>
 
     <figure>
@@ -91,7 +91,7 @@
     </figure>
 
     <h2>Code</h2>
-    <p>View the code here: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/decision_trees.py">decision_trees.py</a></p>
+    <p>View the code here: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/decision_trees.py">decision_trees.py</a>[cite: 12]</p>
     <p class="draft">Note the language (Python) and core packages (pandas, scikit-learn).</p>
 
     <h2>Results</h2>

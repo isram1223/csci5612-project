@@ -54,7 +54,8 @@
     Every internal node asks a question and every leaf node provides a predicstion based on the majority class.
     In order to evaluate the "goodness" of a potential split, the algorithm calculates the reduction of impurity. This is done using Gini or Entropy. Entropy specifically measures the chaos within a node with the maximum entropy being a value of 1.0. 0 is the value of a perfecly pure node. Information Gain is the score used to pick the best split.
     This is calculated by taking the entropy of the parent node and subtracting the size-weighted average of the entropy of the resulting child nodes. The algorithm is greedy and selelcts the feature threshold that maximizes the Information Gain.
-    A tree will continue to split until every leaf is perfectly pure, if given the opportunity, resulting in zero  training error.</p>
+    A tree will continue to split until every leaf is perfectly pure, if given the opportunity, resulting in zero  training error. For a simple example, imagine a parent node split evenly between High Risk and Low Risk counties, giving it a maximum Entropy of 1.0 (total chaos). If the algorithm tests an "Uninsured Rate  > 15%" and it perfectly seperates the two classes into pure child nodes with an Entropy of 0.0, the Information Gain is 1.0.
+    This would be the maximum possible impovement. Because the algorithm can test every single numeric value of every feature as a potential split, and can then combine them endlessly, it is tecnically possible to create an infinite number of unique trees from a single data set.</p>
 
     <figure>
       <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">

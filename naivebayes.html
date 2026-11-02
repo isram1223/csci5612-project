@@ -53,7 +53,8 @@
     <p class=>Naïve Bayes is a probabilistic supervised learning algorithm that is baded on Bayes Theorem. Bayes Theorem calculates the posterior probability byt multipling the prior probability by the likelihood.
       The algorth is considered "naïve" because it assumed every feature operated completely independently of all other features within a given class.
       This conditional independence is usually untrue in the real world, it simplifies the mathematical computation. There are three main variations of this algorith, Bernoulli, Gaussian, and Multinomial. Bernoulli Naïve Bayes is used for binary featyres containing only 0s and 1s.
-      Gaussian Naïve Bayes is used for continuous numeric variables, assuming features follow a normal bell-curve. Multinomial Naïve Bates is generally used on discrete counts or relative frequencies. Naïve Bayes was specifically used on this data to calulcate the probability that a county falls into a specific infant health risk teir based strictly on its structural community conditions.
+      Gaussian Naïve Bayes is used for continuous numeric variables, assuming features follow a normal bell-curve. Multinomial Naïve Bates is generally used on discrete counts or relative frequencies. Because Naïve Bayes calculates the posterior probabilities by multiplying individual feature probabilties tofether, a single feature with a zero frequency count in the training data woulf cause the entire calculation to zero out. To prevent this, the algorithm utilizes a technique called smoothing, which adds a small baseline value to all the frequency counts. This ensures no probability is ever absolute zero.
+      Naïve Bayes was specifically used on this data to calulcate the probability that a county falls into a specific infant health risk teir based strictly on its structural community conditions.
     </p>
 
     <figure>

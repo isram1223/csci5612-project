@@ -104,7 +104,6 @@
     </figure>
 
     <h2>Code</h2>
-    <h2>Code</h2>
     <p>View the code here: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/regression.py" target="_blank">regression.py</a></p>
     <p>Python was used to conduct the Linear and Logistic Regression analyses. Primary packages used include pandas, numpy, scikit-learn, and matplotlib. An important note is that continuous predictors were standardized using StandardScaler.</p>
 
@@ -112,18 +111,18 @@
     <p class="draft">Describe, illustrate, and visualize the results, the parameters used, and what the results mean for the topic.</p>
 <figure>
       <div class="figbox">
-        <a href="images/ada_tuning_curve.png"><img src="images/ada_tuning_curve.png" alt="AdaBoost Validation Accuracy by Learning Rate" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/ada_tuning_curve.png</code>.</div>
+        <a href="images/reg_pred_vs_actual.png"><img src="images/reg_pred_vs_actual.png" alt="Linear Regression Predicted vs Actual Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/reg_pred_vs_actual.png</code>.</div>
       </div>
-      <figcaption><strong>Figure 7.</strong> AdaBoost validation accuracy across learning rates (0.05, 0.1, 0.5, and 1.0), peaking at 66.0% at a learning rate of 0.5.</figcaption>
+      <figcaption><strong>Figure 6.</strong> Linear Regression predicted versus actual low birth weight percentages across Metro, Micro/Suburban, and Rural counties relative to the perfect prediction line.</figcaption>
     </figure>
 
     <figure>
       <div class="figbox">
-        <a href="images/ada_confusion_matrix.png"><img src="images/ada_confusion_matrix.png" alt="AdaBoost Confusion Matrix across Low, Moderate, and High Risk tiers" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/ada_confusion_matrix.png</code>.</div>
+        <a href="images/reg_confusion_matrix.png"><img src="images/reg_confusion_matrix.png" alt="Logistic Regression Confusion Matrix for Below 8.5% vs High Risk" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/reg_confusion_matrix.png</code>.</div>
       </div>
-      <figcaption><strong>Figure 8.</strong> Confusion matrix for the tuned AdaBoost model on the testing set, correctly classifying 152 Low Risk, 135 Moderate, and 135 High Risk counties.</figcaption>
+      <figcaption><strong>Figure 7.</strong> Confusion matrix for the Logistic Regression model on the testing set, correctly classifying 351 Below 8.5% counties and 169 High Risk (&gt;=8.5%) counties.</figcaption>
     </figure>
 </main>
 <footer class="foot">

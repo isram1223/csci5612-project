@@ -78,7 +78,7 @@
   
     <h2>Data</h2>
     <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_maternal_infant_health.csv">clean_maternal_infant_health.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
- <p class="draft">Explain what data format this method needs, and show a small image of the prepared data used here.</p>
+ <p>Because both Linear and Logistic Regression are supervised learning models they need labeled data. For Linear Regression, the model predicts the continuous <code>low_birthweight_pct</code> outcome directly. For Logistic Regression, that outcome was converted into a binary target variable (<code>high_lbw</code>) classifying counties as either Below 8.5% (0) or High Risk at 8.5% and above (1). The dataset of 2,491 counties was then split into two partitions, a training set containing 75% of the data (1,868 counties) and a testing set containing 25% of the data (623 counties). These must be disjoint to prevent data leakage and ensure the results are accurately showing the predictive power.</p>
   <figure>
       <div class="figbox">
         <a href="images/reg_data_split.png"><img src="images/reg_data_split.png" alt="Table showing the Regression train and test data split" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>

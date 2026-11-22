@@ -51,7 +51,29 @@
 
     <h2>Overview</h2>
     <p class="draft">Explain what AdaBoost (adaptive boosting) is: how it works, and what you plan to do with it for this topic. Add two images.</p>
+<figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <a href="https://medium.com/@roshmitadey/bagging-v-s-boosting-be765c970fd1" target="_blank">
+          <img src="images/ada_overview_1.jpg" alt="Comparison diagram of parallel bagging versus sequential boosting" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+        </a>
+      </div>
+      <figcaption>
+        <strong>Figure 1.</strong> Conceptual comparison of parallel bagging versus sequential boosting, illustrating how boosting trains models one after another so each learner focuses on previous errors.
+        <em>Source: Roshmita Dey, "Bagging v/s Boosting", Medium, <a href="https://medium.com/@roshmitadey/bagging-v-s-boosting-be765c970fd1" target="_blank">https://medium.com/@roshmitadey/bagging-v-s-boosting-be765c970fd1</a>.</em>
+      </figcaption>
+    </figure>
 
+    <figure>
+      <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
+        <a href="https://www.kdnuggets.com/2022/10/implementing-adaboost-scikitlearn.html" target="_blank">
+          <img src="images/ada_overview_2.png" alt="Diagram of AdaBoost chaining sequential decision stumps" loading="lazy" style="width: 100%; max-width: 600px; height: auto; display: block; margin: 0 auto;">
+        </a>
+      </div>
+      <figcaption>
+        <strong>Figure 2.</strong> Sequential decision stumps in AdaBoost, where simple one-split weak learners are chained together and weighted to form a stronger ensemble classifier.
+        <em>Source: Nisha Arya, "Implementing AdaBoost in Scikit-Learn", KDnuggets, <a href="https://www.kdnuggets.com/2022/10/implementing-adaboost-scikitlearn.html" target="_blank">https://www.kdnuggets.com/2022/10/implementing-adaboost-scikitlearn.html</a>.</em>
+      </figcaption>
+    </figure>
     <h2>Data Prep</h2>
     <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>, <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_community_type.csv">clean_labeled_community_type.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
     <p class="draft">Explain what data format this method needs, and show a small image of the prepared data used here.</p>

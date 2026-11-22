@@ -41,7 +41,7 @@
   <div class="wrap band-inner">
     <div class="band-text">
       <h1>AdaBoost</h1>
-      <p class="lede">Added in Project Part 4.</p>
+      <p class="lede">Classifying county infant health risk tiers.</p>
     </div>
     <svg class="art" viewBox="0 0 150 110" aria-hidden="true"><g transform="translate(30 12)"><path d="M40 70 C6 46 4 20 21 13 C31 9 38 13 40 21 C42 13 49 9 59 13 C76 20 74 46 40 70 Z" fill="#a9cdf5"/><path d="M40 57 C27 48 26 38 32 35 C36 33 39 35 40 38.5 C41 35 44 33 48 35 C54 38 53 48 40 57 Z" fill="#ffe08a"/></g><g fill="#ffffff"><path d="M120 16l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/><path d="M22 28l1.6 3.8 3.8 1.6-3.8 1.6L22 38.8l-1.6-3.8-3.8-1.6 3.8-1.6z"/><path d="M130 74l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z"/></g><circle cx="108" cy="92" r="2.4" fill="#ffffff"/><circle cx="14" cy="66" r="2" fill="#ffffff"/></svg>
   </div>
@@ -50,7 +50,7 @@
 <main id="main" class="wrap">
 
     <h2>Overview</h2>
-    <p class="draft">Explain what AdaBoost (adaptive boosting) is: how it works, and what you plan to do with it for this topic. Add two images.</p>
+    <p>AdaBoost is a supervised method that combines many simple deicsion stumps into a strong classifier. This is unlike bagging which trains independent models in parallel to reduce variance. Boosting trains these models sequentially so each new stump is focused on correcting previous mistakes to reduce bias. For this project specifically, AdaBoost uses decision stumps as its weak learners. Every county is assigned an equal weight at the beginning of training. After each stump makes predictions, AdaBoost performs reweighing by increading the weights of the misclassifies countries and decreasing the weights of correctly classifies counties. This forces the next stummp to focus on teh hardest cases. In addition each stump also recieves an important score, this is alpha. This is based on its weighted error rate so that more accurate stumps carry more influnece. When predicting the risk teir of a new county, all stumps combine their predictions through a weighted vote using their alpha values, and the risk teir with the highest total vote is chosen. </p>
 <figure>
       <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
         <a href="https://medium.com/@roshmitadey/bagging-v-s-boosting-be765c970fd1" target="_blank">
@@ -114,7 +114,7 @@
     <p>Python was used to conduct the AdaBoost analysis. Primary packages used include pandas, numpy, scikit-learn, and matplotlib. An important note is that scikit-learn's AdaBoost implementation requires strictly numeric inputs, this means that the categorical community_type variable had to be one-hot encoded into binary indicator columns prior to training.</p>
 
     <h2>Results</h2>
-    <p class="draft">Discuss, illustrate, describe, and visualize the results, the parameters used, and what the results mean for the topic.</p>
+    <p>Both n estimators and learning rate were tuned on a validation split od the training set, trakcing validation accuracy as rounds were added. Validation accuracy peaked at 66.84% at 83 rounds with a learning rate of 0.5. Only evlauted once n the held-out testing set of 623 coutnuies, the fixed model achieves an accuracy of 67.74%. This accuracy is above the baseline of 35.47% and correctly classified 152 Low Risk,m 135 Moderate, and 135 High Risk counties with few errors. Compared to part 3 Decistion Tree (61.64% accuracy), AdaBoost generalized better (67.74% accuracy) by combining weighted stumps instead od relying on a single tree. </p>
 <figure>
       <div class="figbox">
         <a href="images/ada_tuning_curve.png"><img src="images/ada_tuning_curve.png" alt="AdaBoost Validation Accuracy as Boosting Rounds Are Added" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
@@ -131,7 +131,7 @@
       <figcaption><strong>Figure 8.</strong> Confusion matrix for the tuned AdaBoost model on the testing set, correctly classifying 152 Low Risk, 135 Moderate, and 135 High Risk counties.</figcaption>
     </figure>
     <h2>Conclusions</h2>
-    <p class="draft">Explain what was learned that applies to the topic.</p>
+    <p>AdaBoost showed that sequentially combining simple decision stumps can reliably classify U.S. counties into infant health risk teirs using socioeconmic and community-type data. This reaches a 67.74% test accuract. Most remaining erros occured between adjacent tiers rather than confusing Low Risk and High Risk. Overall, this suggests that county-level conditions provide a strong signal for elevated low birth weight risk even where boderline commnities overlap. </p>
 
 </main>
 <footer class="foot">

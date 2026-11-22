@@ -41,7 +41,7 @@
   <div class="wrap band-inner">
     <div class="band-text">
       <h1>Regression</h1>
-      <p class="lede">Added in Project Part 5.</p>
+      <p class="lede">Predicting county low birth weight rates and high-risk status using linear and logistic regression.</p>
     </div>
     <svg class="art" viewBox="0 0 150 110" aria-hidden="true"><g transform="translate(30 12)"><path d="M40 70 C6 46 4 20 21 13 C31 9 38 13 40 21 C42 13 49 9 59 13 C76 20 74 46 40 70 Z" fill="#a9cdf5"/><path d="M40 57 C27 48 26 38 32 35 C36 33 39 35 40 38.5 C41 35 44 33 48 35 C54 38 53 48 40 57 Z" fill="#ffe08a"/></g><g fill="#ffffff"><path d="M120 16l2.4 5.6 5.6 2.4-5.6 2.4-2.4 5.6-2.4-5.6-5.6-2.4 5.6-2.4z"/><path d="M22 28l1.6 3.8 3.8 1.6-3.8 1.6L22 38.8l-1.6-3.8-3.8-1.6 3.8-1.6z"/><path d="M130 74l1.8 4.2 4.2 1.8-4.2 1.8-1.8 4.2-1.8-4.2-4.2-1.8 4.2-1.8z"/></g><circle cx="108" cy="92" r="2.4" fill="#ffffff"/><circle cx="14" cy="66" r="2" fill="#ffffff"/></svg>
   </div>
@@ -50,7 +50,7 @@
 <main id="main" class="wrap">
 
     <h2>Overview</h2>
-    <p class="draft">Explain what regression is, how it works, and what it will be used for with this topic. Add an image.</p>
+    <p> Regression is a type of supervised learning that models the relationship predictors and a target outcome. Linear Regression predicts a continuous numeric value. It does this by fitting a weighted linear equation across the predictors that minimizes the sum of squared errors between predicted and actual values. Linear Regression was specifically used to predict each county's exact low birth weight percentage from community socioeconomic, demographic, and healthcare access. Logistic Regression changes this linear framework for binary classification. It passes the linear combination of predictors through a logistic function to output a probability between 0 and 1, then assigns a class label using 0.5 decision threshold. In this case Logistic Regression calssifies counties as Below 8.5% (0) or High Risk at 8.5% and above (1). The model settings were chosen using 5-fold cross -validation on the training set.</p>
 <figure>
       <div class="figbox" style="height: auto !important; min-height: auto !important; max-height: none !important; overflow: visible !important; border: 1px solid #ccc; border-radius: 8px; padding: 10px; background: white;">
         <a href="https://commons.wikimedia.org/wiki/File:2d_multiple_linear_regression.gif" target="_blank">
@@ -108,7 +108,7 @@
     <p>Python was used to conduct the Linear and Logistic Regression analyses. Primary packages used include pandas, numpy, scikit-learn, and matplotlib. An important note is that continuous predictors were standardized using StandardScaler.</p>
 
     <h2>Results</h2>
-    <p class="draft">Describe, illustrate, and visualize the results, the parameters used, and what the results mean for the topic.</p>
+    <p> One the held-out testing of 623 counties, Linear Regression had an R-squared of 0.6884, an RMSE od 1.1204, and an MAE of 0.8256. Assitionaly the predictions tracked closely along the perfect predictions line across all community types. For Logistic Regression, the 5-fold cross-validation chose C=0.1 with 81,80% CV accuracy, and the fixed mdoel reached 83.47% test acrruacy in comparison to the 61.48% baseline. Overall it correctly classifie 352 Below 8.5% and 169 High Risk counties. When inspecting the standardized coefficients the median income has a coefficnent of -0.8331 (odd ratio = 0.4347), meaning a one standard deviation increase in country median income cuts the odds of falling into the High Risk group by more than half, holding all other factors constant. Overall Logistic Regression outperfomned Naive Bayes models, since Logistic Regression handles correlated socioeconmic predictors much better than Naive Bayes, which assumes the features are independent. </p>
 <figure>
       <div class="figbox">
         <a href="images/reg_pred_vs_actual.png"><img src="images/reg_pred_vs_actual.png" alt="Linear Regression Predicted vs Actual Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
@@ -125,7 +125,7 @@
       <figcaption><strong>Figure 7.</strong> Confusion matrix for the Logistic Regression model on the testing set, correctly classifying 351 Below 8.5% counties and 169 High Risk (&gt;=8.5%) counties.</figcaption>
     </figure>
   <h2>Conclusions</h2>
-    <p class="draft">Explain what was learned that applies to the topic.</p>
+    <p>Both models confirmed that county-level socioeconmic and healthcare indicatros strongly predict infant health outcomes. They explained 68.84% of the variance in low birth weight rates and indetifying High Risk counties with 83.47% accuracy. Economic conditions like median income, aong with smoking and teen birth rates, stand out as key drivers of elevates county-level risk.</p>
 </main>
 <footer class="foot">
   <div class="wrap">

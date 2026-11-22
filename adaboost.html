@@ -118,18 +118,34 @@
     <p class="draft">Discuss, illustrate, describe, and visualize the results, the parameters used, and what the results mean for the topic.</p>
 <figure>
       <div class="figbox">
-        <a href="images/reg_pred_vs_actual.png"><img src="images/reg_pred_vs_actual.png" alt="Linear Regression Predicted vs Actual Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/reg_pred_vs_actual.png</code>.</div>
+        <a href="images/ada_encoded_sample.png"><img src="images/ada_encoded_sample.png" alt="One-Hot Encoding Example for community_type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/ada_encoded_sample.png</code>.</div>
       </div>
-      <figcaption><strong>Figure 6.</strong> Linear Regression predicted versus actual low birth weight percentages across Metro, Micro/Suburban, and Rural counties relative to the perfect prediction line.</figcaption>
+      <figcaption><strong>Figure 3.</strong> One-hot encoding example converting the categorical <code>community_type</code> feature into binary indicator columns for Metro, Micro/Suburban, and Rural counties.</figcaption>
     </figure>
 
     <figure>
       <div class="figbox">
-        <a href="images/reg_confusion_matrix.png"><img src="images/reg_confusion_matrix.png" alt="Logistic Regression Confusion Matrix for Below 8.5% vs High Risk" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/reg_confusion_matrix.png</code>.</div>
+        <a href="images/ada_data_split.png"><img src="images/ada_data_split.png" alt="Table showing the 75/25 AdaBoost train and test data split" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/ada_data_split.png</code>.</div>
       </div>
-      <figcaption><strong>Figure 7.</strong> Confusion matrix for the Logistic Regression model on the testing set, correctly classifying 351 Below 8.5% counties and 169 High Risk (&gt;=8.5%) counties.</figcaption>
+      <figcaption><strong>Figure 4.</strong> Train and test dataset breakdown showing 1,868 training counties (75%) and 623 testing counties (25%) out of 2,491 total counties.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/ada_train_sample.png"><img src="images/ada_train_sample.png" alt="Sample of the AdaBoost Training Set" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/ada_train_sample.png</code>.</div>
+      </div>
+      <figcaption><strong>Figure 5.</strong> Random sample rows from the AdaBoost training dataset showing selected county predictors and the target <code>infant_risk_tier</code> label.</figcaption>
+    </figure>
+
+    <figure>
+      <div class="figbox">
+        <a href="images/ada_test_sample.png"><img src="images/ada_test_sample.png" alt="Sample of the AdaBoost Testing Set" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/ada_test_sample.png</code>.</div>
+      </div>
+      <figcaption><strong>Figure 6.</strong> Random sample rows from the held-out AdaBoost testing dataset.</figcaption>
     </figure>
     <h2>Conclusions</h2>
     <p class="draft">Explain what was learned that applies to the topic.</p>

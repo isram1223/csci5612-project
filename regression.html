@@ -108,7 +108,7 @@
     <p>Python was used to conduct the Linear and Logistic Regression analyses. Primary packages used include pandas, numpy, scikit-learn, and matplotlib. An important note is that continuous predictors were standardized using StandardScaler.</p>
 
     <h2>Results</h2>
-    <p> One the held-out testing of 623 counties, Linear Regression had an R-squared of 0.6884, an RMSE od 1.1204, and an MAE of 0.8256. Assitionaly the predictions tracked closely along the perfect predictions line across all community types. For Logistic Regression, the 5-fold cross-validation chose C=0.1 with 81,80% CV accuracy, and the fixed mdoel reached 83.47% test acrruacy in comparison to the 61.48% baseline. Overall it correctly classifie 352 Below 8.5% and 169 High Risk counties. When inspecting the standardized coefficients the median income has a coefficnent of -0.8331 (odd ratio = 0.4347), meaning a one standard deviation increase in country median income cuts the odds of falling into the High Risk group by more than half, holding all other factors constant. Overall Logistic Regression outperfomned Naive Bayes models, since Logistic Regression handles correlated socioeconmic predictors much better than Naive Bayes, which assumes the features are independent. </p>
+    <p> One the held-out testing of 623 counties, Linear Regression had an R-squared of 0.6884, an RMSE od 1.1204, and an MAE of 0.8256. Assitionaly the predictions tracked closely along the perfect predictions line across all community types. For Logistic Regression, the 5-fold cross-validation chose C=0.1 with 81,80% CV accuracy, and the fixed mdoel reached 82.34% test acrruacy in comparison to the 61.48% baseline. Overall it correctly classifie 349 Below 8.5% and 164 High Risk counties. When inspecting the standardized coefficients the median income has a coefficnent of -0.5365 (odd ratio = 0.5848), meaning a one standard deviation increase in country median income cuts the odds of falling into the High Risk group by 41.52%, holding all other factors constant. Overall Logistic Regression outperfomned Naive Bayes models, since Logistic Regression handles correlated socioeconmic predictors much better than Naive Bayes, which assumes the features are independent. </p>
 <figure>
       <div class="figbox">
         <a href="images/reg_pred_vs_actual.png"><img src="images/reg_pred_vs_actual.png" alt="Linear Regression Predicted vs Actual Low Birth Weight by Community Type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
@@ -122,10 +122,10 @@
         <a href="images/reg_confusion_matrix.png"><img src="images/reg_confusion_matrix.png" alt="Logistic Regression Confusion Matrix for Below 8.5% vs High Risk" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
         <div class="ph">Save as <code>images/reg_confusion_matrix.png</code>.</div>
       </div>
-      <figcaption><strong>Figure 7.</strong> Confusion matrix for the Logistic Regression model on the testing set, correctly classifying 351 Below 8.5% counties and 169 High Risk (&gt;=8.5%) counties.</figcaption>
+      <figcaption><strong>Figure 7.</strong> Confusion matrix for the Logistic Regression model on the testing set, correctly classifying 349 Below 8.5% counties and 164 High Risk (&gt;=8.5%) counties.</figcaption>
     </figure>
   <h2>Conclusions</h2>
-    <p>Both models confirmed that county-level socioeconmic and healthcare indicatros strongly predict infant health outcomes. They explained 68.84% of the variance in low birth weight rates and indetifying High Risk counties with 83.47% accuracy. Economic conditions like median income, aong with smoking and teen birth rates, stand out as key drivers of elevates county-level risk.</p>
+    <p>Both models confirmed that county-level socioeconmic and healthcare indicatros strongly predict infant health outcomes. They explained 68.84% of the variance in low birth weight rates and indetifying High Risk counties with 82.34% accuracy. Economic conditions like median income, aong with smoking and teen birth rates, stand out as key drivers of elevates county-level risk.</p>
 </main>
 <footer class="foot">
   <div class="wrap">

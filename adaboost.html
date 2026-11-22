@@ -110,7 +110,6 @@
     </figure>
 
     <h2>Code</h2>
-    <h2>Code</h2>
     <p>View the code here: <a href="https://github.com/isram1223/csci5612-project/blob/main/code/adaboost.py" target="_blank">adaboost.py</a></p>
     <p>Python was used to conduct the AdaBoost analysis. Primary packages used include pandas, numpy, scikit-learn, and matplotlib. An important note is that scikit-learn's AdaBoost implementation requires strictly numeric inputs, this means that the categorical community_type variable had to be one-hot encoded into binary indicator columns prior to training.</p>
 
@@ -118,34 +117,18 @@
     <p class="draft">Discuss, illustrate, describe, and visualize the results, the parameters used, and what the results mean for the topic.</p>
 <figure>
       <div class="figbox">
-        <a href="images/ada_encoded_sample.png"><img src="images/ada_encoded_sample.png" alt="One-Hot Encoding Example for community_type" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/ada_encoded_sample.png</code>.</div>
+        <a href="images/ada_tuning_curve.png"><img src="images/ada_tuning_curve.png" alt="AdaBoost Validation Accuracy as Boosting Rounds Are Added" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/ada_tuning_curve.png</code>.</div>
       </div>
-      <figcaption><strong>Figure 3.</strong> One-hot encoding example converting the categorical <code>community_type</code> feature into binary indicator columns for Metro, Micro/Suburban, and Rural counties.</figcaption>
+      <figcaption><strong>Figure 7.</strong> AdaBoost validation accuracy as boosting rounds (<code>n_estimators</code>) are added across four learning rates (0.05, 0.1, 0.5, and 1.0), peaking at 66.84% at 83 rounds with a learning rate of 0.5.</figcaption>
     </figure>
 
     <figure>
       <div class="figbox">
-        <a href="images/ada_data_split.png"><img src="images/ada_data_split.png" alt="Table showing the 75/25 AdaBoost train and test data split" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/ada_data_split.png</code>.</div>
+        <a href="images/ada_confusion_matrix.png"><img src="images/ada_confusion_matrix.png" alt="AdaBoost Confusion Matrix across Low, Moderate, and High Risk tiers" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
+        <div class="ph">Save as <code>images/ada_confusion_matrix.png</code>.</div>
       </div>
-      <figcaption><strong>Figure 4.</strong> Train and test dataset breakdown showing 1,868 training counties (75%) and 623 testing counties (25%) out of 2,491 total counties.</figcaption>
-    </figure>
-
-    <figure>
-      <div class="figbox">
-        <a href="images/ada_train_sample.png"><img src="images/ada_train_sample.png" alt="Sample of the AdaBoost Training Set" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/ada_train_sample.png</code>.</div>
-      </div>
-      <figcaption><strong>Figure 5.</strong> Random sample rows from the AdaBoost training dataset showing selected county predictors and the target <code>infant_risk_tier</code> label.</figcaption>
-    </figure>
-
-    <figure>
-      <div class="figbox">
-        <a href="images/ada_test_sample.png"><img src="images/ada_test_sample.png" alt="Sample of the AdaBoost Testing Set" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
-        <div class="ph">Save as <code>images/ada_test_sample.png</code>.</div>
-      </div>
-      <figcaption><strong>Figure 6.</strong> Random sample rows from the held-out AdaBoost testing dataset.</figcaption>
+      <figcaption><strong>Figure 8.</strong> Confusion matrix for the tuned AdaBoost model on the testing set, correctly classifying 152 Low Risk, 135 Moderate, and 135 High Risk counties.</figcaption>
     </figure>
     <h2>Conclusions</h2>
     <p class="draft">Explain what was learned that applies to the topic.</p>

@@ -76,7 +76,7 @@
     </figure>
     <h2>Data Prep</h2>
     <p>Prepared dataset: <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_infant_risk.csv">clean_labeled_infant_risk.csv</a>, <a href="https://github.com/isram1223/csci5612-project/blob/main/clean_data/clean_labeled_community_type.csv">clean_labeled_community_type.csv</a>. Raw data: <a href="https://github.com/isram1223/csci5612-project/tree/main/raw_data">raw_data folder</a>.</p>
-    <p class="draft">Explain what data format this method needs, and show a small image of the prepared data used here.</p>
+    <p>Because AdaBoost is a supervised ensemble learning model, it needs both labeled and numeric data. The categorical <code>community_type</code> feature was one-hot encoded into binary indicator columns for Metro, Micro/Suburban, and Rural counties. In addition the continuous low birth weight outcome was binned into three distinct <code>infant_risk_tier</code> categories labeled "Low_Risk", "Moderate_Risk", and "High_Risk." The dataset of 2,491 counties was then split into two partitions, a training set containing 75% of the data (1,868 counties) and a testing set containing 25% of the data (623 counties) to calculate its final accuracy. It is essential that these two sets are completely disjoint so the model is evaluated on unseen data to prevent data leakage and accuracy of predictice power.</p>
   <figure>
       <div class="figbox">
         <a href="images/ada_encoded_sample.png"><img src="images/ada_encoded_sample.png" alt="Sample of the Encoded AdaBoost Dataset" loading="lazy" onerror="this.closest('.figbox').classList.add('missing')"></a>
